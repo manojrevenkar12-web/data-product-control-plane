@@ -67,8 +67,7 @@ resource "snowflake_account_role" "team" {
 resource "snowflake_resource_monitor" "team" {
   for_each                  = var.teams
   name                      = "RM_${upper(replace(each.key, "-", "_"))}"
-  credit_quota              = ceil(each.value.credits_per_month)
-  frequency                 = "MONTHLY"
+  credit_quota              = ceil(each.value.credits_per_month) # resets monthly: Snowflake's default frequency
   notify_triggers           = [75, 90]
   suspend_trigger           = 100
   suspend_immediate_trigger = 110
