@@ -1,0 +1,24 @@
+# Held-out world: another seed, start date and team count. Run once (see AGENTS.md).
+seed = 20261113
+days = 91
+start = "2026-07-06"
+teams = 9
+products_per_team = [2, 3]
+rows_per_delivery = [40, 120]
+
+[rates]                       # per product-day unless stated
+late_delivery = 0.03
+missing_delivery = 0.01
+null_keys = 0.012
+duplicate_keys = 0.012
+out_of_range = 0.01
+unit_change = 0.004           # a numeric column arrives x1000 (thousands instead of units)
+pii_in_free_text = 0.004      # e-mail addresses or phone numbers in a free-text column
+change_per_week = 0.08        # per product: the owning team changes the contract
+breaking_share = 0.45         # of those changes
+access_requests_per_week = 6
+untagged_query_share = 0.18
+runaway_per_team_year = 1.2
+warehouse_left_large_per_year = 2
+onboardings = 10              # new products proposed during the run
+onboarding_mistake_share = 0.6

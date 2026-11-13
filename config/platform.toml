@@ -1,0 +1,47 @@
+# Settings of the platform. The simulated world never reads this file.
+
+[snowflake]
+mode = "emulated"            # "emulated" runs on fakesnow (DuckDB); "account" uses the connector settings below
+account = ""                 # e.g. "statista-dataplatform"; credentials come from SNOWFLAKE_* environment variables
+database = "DATA_PLATFORM"
+platform_schema = "PLATFORM"
+staging_schema = "STAGE"
+core_schema = "CORE"
+serve_schema = "SERVE"
+usage_database = "SNOWFLAKE" # ACCOUNT_USAGE lives here in an account; the world writes a copy of the same shape
+
+[gates]
+enabled = true               # false = the monitoring-only design: checks run after publishing and only alert
+pii_min_share = 0.02         # a string column is "PII-looking" when at least this share of sampled values match
+scale_ratio = 50             # a numeric column whose median moves by this factor against its recent history
+scale_history_days = 14
+# Row-scoped findings (a missing required value, a value out of range) can be handled per row: publish the valid
+# rows, keep the others in staging and tell the producer. Batch-scoped findings (duplicates, a scale shift, personal
+# data) always hold the whole delivery back. Set to 0 to hold every delivery with any finding.
+row_quarantine_max_share = 0.1
+
+[gates.patterns]             # Snowflake REGEXP_LIKE patterns for personal data in columns not declared pii
+email = '.*[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+[.][A-Za-z]{2,}.*'
+phone = '.*[+][0-9]{2}[ 0-9]{8,14}.*'
+iban = '.*[A-Z]{2}[0-9]{2}[A-Z0-9]{11,30}.*'
+
+[sla]
+monitor_every_hours = 1
+
+[cost]
+credit_price_usd = 3.9       # on-demand list price per credit, Enterprise edition, AWS eu-central-1; set your contract price
+anomaly_ratio = 2.5          # hour > ratio x trailing median of the same team ...
+anomaly_floor_credits = 1.5  # ... and above this floor
+anomaly_lookback_hours = 168
+anomaly_consecutive_hours = 2
+run_hour = 6                 # ACCOUNT_USAGE lags by hours: the cost job runs daily over the previous day
+resource_monitor_notify = 0.9  # the baseline: Snowflake resource monitors notify at this share of the monthly budget
+
+[ports]
+api_page_size = 200
+
+[policy]                     # handed to OPA as data.limits; the Rego in policies/ reads nothing else
+agent_max_classification = "internal"
+min_description_chars = 40
+min_purpose_chars = 20
+max_credits_per_month = { XSMALL = 200, SMALL = 400, MEDIUM = 800, LARGE = 1600 }

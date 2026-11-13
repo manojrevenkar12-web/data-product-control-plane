@@ -1,0 +1,18 @@
+# Reference product 3 of 3: events from Kafka instead of files.
+id: commerce.shop_orders
+domain: commerce
+description: One row per order in the Statista shop (reports and accounts), from the order service's events.
+owner: {team: shop-backend, email: shop-backend@example.com}
+classification: internal
+source: {kind: kafka, location: "shop.orders.v1"}
+sla: {freshness_hours: 4, schedule: hourly}
+budget: {credits_per_month: 30, warehouse_size: XSMALL}
+ports: [api, kafka]
+contract:
+  version: 1.0.0
+  key: [order_id]
+  columns:
+    - {name: order_id, type: string, required: true, description: Order id}
+    - {name: ordered_at, type: timestamp, required: true, description: UTC}
+    - {name: product_type, type: string, required: true, description: report, account or dossier}
+    - {name: amount, type: number, required: true, unit: EUR, min: 0, description: Net order value}

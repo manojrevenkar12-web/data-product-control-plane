@@ -1,0 +1,20 @@
+# Reference product 2 of 3: derived from another product, offered to agents over MCP and A2A.
+id: market.online_spend_index
+domain: market
+description: Weighted average monthly online spend per country and survey wave, the basis of the eCommerce outlook.
+owner: {team: market-insights, email: market-insights@example.com}
+classification: internal
+source: {kind: files, location: "s3://dp-landing/market/online_spend_index/"}
+sla: {freshness_hours: 30, schedule: daily}
+budget: {credits_per_month: 40, warehouse_size: XSMALL}
+ports: [api, mcp, a2a, kafka]
+inputs:
+  survey.consumer_panel: [country, wave, weight, monthly_spend]
+contract:
+  version: 1.0.0
+  key: [country, wave]
+  columns:
+    - {name: country, type: string, required: true, description: ISO 3166-1 alpha-2}
+    - {name: wave, type: string, required: true, description: Survey wave}
+    - {name: avg_monthly_spend, type: number, required: true, unit: EUR, min: 0, description: Weighted mean of monthly online spend}
+    - {name: respondents, type: integer, required: true, unit: count, min: 0, description: Respondents in the cell}

@@ -1,0 +1,21 @@
+# Reference product 1 of 3: files from S3, personal data, agent-safe derived product downstream.
+id: survey.consumer_panel
+domain: survey
+description: One row per respondent and survey wave of the Consumer Insights panel, weighted to the population.
+owner: {team: survey-data, email: survey-data@example.com}
+classification: confidential
+source: {kind: files, location: "s3://dp-landing/survey/consumer_panel/"}
+sla: {freshness_hours: 26, schedule: daily}
+budget: {credits_per_month: 60, warehouse_size: XSMALL}
+ports: [api, kafka]
+contract:
+  version: 1.0.0
+  key: [respondent_id, wave]
+  columns:
+    - {name: respondent_id, type: string, required: true, description: Panel member id}
+    - {name: wave, type: string, required: true, description: Survey wave, e.g. 2026-W03}
+    - {name: country, type: string, required: true, description: ISO 3166-1 alpha-2}
+    - {name: email, type: string, pii: true, description: Contact address for re-contact consent}
+    - {name: weight, type: number, required: true, unit: ratio, min: 0, max: 50, description: Raking weight}
+    - {name: monthly_spend, type: number, unit: EUR, min: 0, description: Self-reported online spend per month}
+    - {name: comment, type: string, description: Free-text answer}
