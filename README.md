@@ -25,16 +25,16 @@ kept apart. The same world runs against two designs:
   spend is found when the monthly invoice is read.
 
 <!-- results:start -->
-| | Gates (dev) | Monitoring only (dev) |
-|---|---:|---:|
-| Bad deliveries whose rows reached consumers <br><sub>of 138 planted (duplicate keys, missing keys, values out of range, personal data in free text, values in thousands)</sub> | **3** | 138 |
-| Hours bad data was readable <br><sub>until a corrected delivery replaced it; with gates, all of it is the 3 misses, which no check flagged and so nobody corrected</sub> | **4,317** | 5,165 |
-| Personal data published in a column not declared as personal <br><sub>values; 10 deliveries carried e-mail addresses or phone numbers in free text</sub> | **0** | 160 |
-| Breaking contract changes that reached a consumer <br><sub>of 13 that removed, renamed, retyped or re-united a column someone reads</sub> | **0** | 10 |
-| Onboarding mistakes that went live <br><sub>of 7; 7 fixed by the team from the message alone</sub> | **0** | 7 |
-| Credits burnt by runaway queries and oversized warehouses <br><sub>6 episodes; the team was told after a median 19.5 h against 198.0 h</sub> | **877** | 7,639 |
-| Spend nobody could attribute to a team <br><sub>same usage, two methods: tag, role, user and warehouse against query tags alone</sub> | **3.3%** | 38.6% |
-| Hours products were staler than their SLA <br><sub>the price of holding bad data back: consumers wait for the corrected delivery</sub> | **2,079** | 1,157 |
+| | Gates (dev) | Monitoring only (dev) | Gates (held-out) | Monitoring only (held-out) |
+|---|---:|---:|---:|---:|
+| Bad deliveries whose rows reached consumers <br><sub>of 138 planted (duplicate keys, missing keys, values out of range, personal data in free text, values in thousands)</sub> | **3** | 138 | **1** | 86 |
+| Hours bad data was readable <br><sub>until a corrected delivery replaced it; with gates, all of it is the 3 misses, which no check flagged and so nobody corrected</sub> | **4,317** | 5,165 | **1,439** | 2,812 |
+| Personal data published in a column not declared as personal <br><sub>values; 10 deliveries carried e-mail addresses or phone numbers in free text</sub> | **0** | 160 | **0** | 49 |
+| Breaking contract changes that reached a consumer <br><sub>changes that removed, renamed, retyped or re-united a column someone reads; the counts differ because teams whose change was refused proposed different ones later</sub> | **0 of 13** | 10 of 10 | **0 of 6** | 6 of 6 |
+| Onboarding mistakes that went live <br><sub>of 7; 7 fixed by the team from the message alone</sub> | **0** | 7 | **0** | 4 |
+| Credits burnt by runaway queries and oversized warehouses <br><sub>6 episodes; the team was told after a median 19.5 h against 198.0 h</sub> | **877** | 7,639 | **496** | 6,671 |
+| Spend nobody could attribute to a team <br><sub>same usage, two methods: tag, role, user and warehouse against query tags alone</sub> | **3.3%** | 38.6% | **3.1%** | 41.6% |
+| Hours products were staler than their SLA <br><sub>the price of holding bad data back: consumers wait for the corrected delivery</sub> | **2,079** | 1,157 | **1,815** | 1,024 |
 
 - **34 products** from 10 teams, 3,753 deliveries, 3,753 batches decided, 181 OPA evaluations.
 - **Clean deliveries held by mistake:** 0 of 3,615.
@@ -47,7 +47,8 @@ kept apart. The same world runs against two designs:
 - **OpenMetadata:** 34 tables, 34 data products, 9 lineage edges; **Terraform:** 102 roles, 10 warehouses with resource monitors, 11 Kafka topics.
 <!-- results:end -->
 
-The held-out world (another seed, start date and team count) was run once after the code was frozen; see AGENTS.md.
+The notes under each line give the dev world's counts. The held-out world (another seed, start date and team count)
+was run once after the code was frozen, at the commit in `config/heldout.lock`; see AGENTS.md.
 
 ## What it does
 

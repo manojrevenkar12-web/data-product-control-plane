@@ -1207,10 +1207,10 @@
    "platform": "0"
   },
   {
-   "baseline": "10",
+   "baseline": "10 of 10",
    "label": "Breaking contract changes that reached a consumer",
-   "note": "of 13 that removed, renamed, retyped or re-united a column someone reads",
-   "platform": "0"
+   "note": "changes that removed, renamed, retyped or re-united a column someone reads; the counts differ because teams whose change was refused proposed different ones later",
+   "platform": "0 of 13"
   },
   {
    "baseline": "7",

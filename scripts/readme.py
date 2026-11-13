@@ -50,10 +50,10 @@ def ledger(rep: dict) -> list[dict]:
         },
         {
             "label": "Breaking contract changes that reached a consumer",
-            "platform": n(p[ch]["breaking_reached_consumers"]),
-            "baseline": n(b[ch]["breaking_reached_consumers"]),
-            "note": f"of {p[ch]['breaking_with_consumers']} that removed, renamed, retyped or re-united a column "
-            "someone reads",
+            "platform": f"{n(p[ch]['breaking_reached_consumers'])} of {p[ch]['breaking_with_consumers']}",
+            "baseline": f"{n(b[ch]['breaking_reached_consumers'])} of {b[ch]['breaking_with_consumers']}",
+            "note": "changes that removed, renamed, retyped or re-united a column someone reads; the counts differ "
+            "because teams whose change was refused proposed different ones later",
         },
         {
             "label": "Onboarding mistakes that went live",
