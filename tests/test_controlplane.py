@@ -84,3 +84,6 @@ def test_onboarding_mistakes_name_the_field_to_fix(wh, settings, products):
     assert {v["field"] for v in res["violations"]} == {"contract.columns.avg_monthly_spend", "budget.credits_per_month"}
     bad = {"id": "Not An Id"}
     assert cp.propose(bad, NOW)["violations"][0]["rule"] == "schema"
+    twice = copy.deepcopy(products["market.online_spend_index"].model_dump(mode="json"))
+    twice["contract"]["columns"].append(twice["contract"]["columns"][0])
+    assert "declared twice" in cp.propose(twice, NOW)["violations"][0]["msg"]

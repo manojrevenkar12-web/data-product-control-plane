@@ -1,0 +1,1980 @@
+{
+ "alerts": [
+  {
+   "credits_per_hour": 9.35,
+   "since": "2026-02-13T08:00:00",
+   "team": "mobility-outlook",
+   "told_at": "2026-02-14T06:00:00"
+  },
+  {
+   "credits_per_hour": 5.09,
+   "since": "2026-02-20T14:00:00",
+   "team": "content-delivery",
+   "told_at": "2026-02-21T06:00:00"
+  },
+  {
+   "credits_per_hour": 5.64,
+   "since": "2026-03-21T02:00:00",
+   "team": "ecommerce-tracking",
+   "told_at": "2026-03-22T06:00:00"
+  },
+  {
+   "credits_per_hour": 6.41,
+   "since": "2026-03-24T16:00:00",
+   "team": "consumer-insights",
+   "told_at": "2026-03-25T06:00:00"
+  },
+  {
+   "credits_per_hour": 9.81,
+   "since": "2026-03-29T05:00:00",
+   "team": "health-data",
+   "told_at": "2026-03-30T06:00:00"
+  },
+  {
+   "credits_per_hour": 9.74,
+   "since": "2026-04-26T13:00:00",
+   "team": "company-data",
+   "told_at": "2026-04-27T06:00:00"
+  }
+ ],
+ "cost": [
+  {
+   "idle": 0.0,
+   "none": 272.6,
+   "role": 0.0,
+   "tag": 0.0,
+   "team": "(unattributed)",
+   "user": 0.0,
+   "warehouse": 0.0
+  },
+  {
+   "idle": 108.7,
+   "none": 0.0,
+   "role": 169.9,
+   "tag": 364.4,
+   "team": "ad-sales",
+   "user": 58.3,
+   "warehouse": 0.0
+  },
+  {
+   "idle": 137.5,
+   "none": 0.0,
+   "role": 168.3,
+   "tag": 514.8,
+   "team": "company-data",
+   "user": 68.6,
+   "warehouse": 0.0
+  },
+  {
+   "idle": 124.7,
+   "none": 0.0,
+   "role": 164.1,
+   "tag": 382.7,
+   "team": "consumer-insights",
+   "user": 139.1,
+   "warehouse": 0.0
+  },
+  {
+   "idle": 119.1,
+   "none": 0.0,
+   "role": 179.4,
+   "tag": 447.9,
+   "team": "content-delivery",
+   "user": 25.3,
+   "warehouse": 0.0
+  },
+  {
+   "idle": 130.3,
+   "none": 0.0,
+   "role": 170.7,
+   "tag": 497.0,
+   "team": "ecommerce-tracking",
+   "user": 47.5,
+   "warehouse": 0.0
+  },
+  {
+   "idle": 110.6,
+   "none": 0.0,
+   "role": 172.0,
+   "tag": 369.4,
+   "team": "finance-revenue",
+   "user": 59.3,
+   "warehouse": 0.0
+  },
+  {
+   "idle": 147.1,
+   "none": 0.0,
+   "role": 152.3,
+   "tag": 604.6,
+   "team": "health-data",
+   "user": 49.3,
+   "warehouse": 0.0
+  },
+  {
+   "idle": 108.7,
+   "none": 0.0,
+   "role": 167.8,
+   "tag": 375.6,
+   "team": "market-insights",
+   "user": 45.8,
+   "warehouse": 0.0
+  },
+  {
+   "idle": 142.1,
+   "none": 0.0,
+   "role": 368.1,
+   "tag": 379.2,
+   "team": "mobility-outlook",
+   "user": 42.7,
+   "warehouse": 0.0
+  },
+  {
+   "idle": 108.3,
+   "none": 0.0,
+   "role": 185.0,
+   "tag": 361.8,
+   "team": "survey-data",
+   "user": 44.8,
+   "warehouse": 0.0
+  }
+ ],
+ "gate_log": [
+  {
+   "at": "2026-03-19T01:00:00",
+   "checks": [
+    "duplicate_key",
+    "required_null"
+   ],
+   "columns": [
+    "entity_id",
+    "entity_id,period"
+   ],
+   "data_date": "2026-03-18",
+   "product": "finance.orders_b"
+  },
+  {
+   "at": "2026-03-21T02:00:00",
+   "checks": [
+    "duplicate_key"
+   ],
+   "columns": [
+    "entity_id,period"
+   ],
+   "data_date": "2026-03-20",
+   "product": "mobility.new_0"
+  },
+  {
+   "at": "2026-03-21T02:00:00",
+   "checks": [
+    "undeclared_pii"
+   ],
+   "columns": [
+    "note"
+   ],
+   "data_date": "2026-03-20",
+   "product": "market.rankings_a"
+  },
+  {
+   "at": "2026-03-21T03:00:00",
+   "checks": [
+    "duplicate_key",
+    "required_null"
+   ],
+   "columns": [
+    "entity_id",
+    "entity_id,period"
+   ],
+   "data_date": "2026-03-20",
+   "product": "finance.users_a"
+  },
+  {
+   "at": "2026-03-22T02:00:00",
+   "checks": [
+    "duplicate_key",
+    "out_of_range"
+   ],
+   "columns": [
+    "brands_0",
+    "entity_id,period"
+   ],
+   "data_date": "2026-03-21",
+   "product": "mobility.brands_c"
+  },
+  {
+   "at": "2026-03-23T01:00:00",
+   "checks": [
+    "duplicate_key"
+   ],
+   "columns": [
+    "entity_id,period"
+   ],
+   "data_date": "2026-03-22",
+   "product": "health.brands_b"
+  },
+  {
+   "at": "2026-03-23T01:00:00",
+   "checks": [
+    "duplicate_key"
+   ],
+   "columns": [
+    "entity_id,period"
+   ],
+   "data_date": "2026-03-22",
+   "product": "survey.revenue_c"
+  },
+  {
+   "at": "2026-03-24T01:00:00",
+   "checks": [
+    "duplicate_key",
+    "required_null"
+   ],
+   "columns": [
+    "entity_id",
+    "entity_id,period"
+   ],
+   "data_date": "2026-03-23",
+   "product": "mobility.new_3"
+  },
+  {
+   "at": "2026-03-24T01:00:00",
+   "checks": [
+    "duplicate_key",
+    "required_null"
+   ],
+   "columns": [
+    "entity_id",
+    "entity_id,period"
+   ],
+   "data_date": "2026-03-23",
+   "product": "mobility.new_0"
+  },
+  {
+   "at": "2026-03-28T02:00:00",
+   "checks": [
+    "duplicate_key",
+    "required_null"
+   ],
+   "columns": [
+    "entity_id",
+    "entity_id,period"
+   ],
+   "data_date": "2026-03-27",
+   "product": "adsales.revenue_b"
+  },
+  {
+   "at": "2026-03-29T02:00:00",
+   "checks": [
+    "duplicate_key",
+    "required_null"
+   ],
+   "columns": [
+    "entity_id",
+    "entity_id,period"
+   ],
+   "data_date": "2026-03-28",
+   "product": "company.revenue_c"
+  },
+  {
+   "at": "2026-03-29T02:00:00",
+   "checks": [
+    "duplicate_key",
+    "required_null"
+   ],
+   "columns": [
+    "entity_id",
+    "entity_id,period"
+   ],
+   "data_date": "2026-03-28",
+   "product": "adsales.prices_a"
+  },
+  {
+   "at": "2026-03-30T01:00:00",
+   "checks": [
+    "duplicate_key"
+   ],
+   "columns": [
+    "entity_id,period"
+   ],
+   "data_date": "2026-03-29",
+   "product": "mobility.rankings_a"
+  },
+  {
+   "at": "2026-04-01T02:00:00",
+   "checks": [
+    "duplicate_key"
+   ],
+   "columns": [
+    "entity_id,period"
+   ],
+   "data_date": "2026-03-31",
+   "product": "finance.prices_c"
+  },
+  {
+   "at": "2026-04-01T03:00:00",
+   "checks": [
+    "duplicate_key"
+   ],
+   "columns": [
+    "entity_id,period"
+   ],
+   "data_date": "2026-03-31",
+   "product": "content.panel_b"
+  },
+  {
+   "at": "2026-04-02T01:00:00",
+   "checks": [
+    "duplicate_key"
+   ],
+   "columns": [
+    "entity_id,period"
+   ],
+   "data_date": "2026-04-01",
+   "product": "consumer.revenue_b"
+  },
+  {
+   "at": "2026-04-05T01:00:00",
+   "checks": [
+    "duplicate_key"
+   ],
+   "columns": [
+    "entity_id,period"
+   ],
+   "data_date": "2026-04-04",
+   "product": "health.brands_a"
+  },
+  {
+   "at": "2026-04-07T01:00:00",
+   "checks": [
+    "duplicate_key"
+   ],
+   "columns": [
+    "entity_id,period"
+   ],
+   "data_date": "2026-04-06",
+   "product": "mobility.new_3"
+  },
+  {
+   "at": "2026-04-08T01:00:00",
+   "checks": [
+    "duplicate_key",
+    "required_null"
+   ],
+   "columns": [
+    "entity_id",
+    "entity_id,period"
+   ],
+   "data_date": "2026-04-07",
+   "product": "survey.new_1"
+  },
+  {
+   "at": "2026-04-08T02:00:00",
+   "checks": [
+    "undeclared_pii"
+   ],
+   "columns": [
+    "note"
+   ],
+   "data_date": "2026-04-07",
+   "product": "market.rankings_a"
+  },
+  {
+   "at": "2026-04-09T02:00:00",
+   "checks": [
+    "scale_shift"
+   ],
+   "columns": [
+    "traffic_1"
+   ],
+   "data_date": "2026-04-08",
+   "product": "mobility.new_7"
+  },
+  {
+   "at": "2026-04-09T02:00:00",
+   "checks": [
+    "duplicate_key"
+   ],
+   "columns": [
+    "entity_id,period"
+   ],
+   "data_date": "2026-04-08",
+   "product": "adsales.prices_a"
+  },
+  {
+   "at": "2026-04-09T04:00:00",
+   "checks": [
+    "undeclared_pii"
+   ],
+   "columns": [
+    "note"
+   ],
+   "data_date": "2026-04-08",
+   "product": "tracking.orders_a"
+  },
+  {
+   "at": "2026-04-10T01:00:00",
+   "checks": [
+    "duplicate_key"
+   ],
+   "columns": [
+    "entity_id,period"
+   ],
+   "data_date": "2026-04-09",
+   "product": "adsales.prices_a"
+  },
+  {
+   "at": "2026-04-11T01:00:00",
+   "checks": [
+    "scale_shift"
+   ],
+   "columns": [
+    "rankings_1"
+   ],
+   "data_date": "2026-04-10",
+   "product": "health.brands_b"
+  },
+  {
+   "at": "2026-04-12T01:00:00",
+   "checks": [
+    "duplicate_key",
+    "required_null"
+   ],
+   "columns": [
+    "entity_id",
+    "entity_id,period"
+   ],
+   "data_date": "2026-04-11",
+   "product": "survey.prices_a"
+  },
+  {
+   "at": "2026-04-15T02:00:00",
+   "checks": [
+    "duplicate_key",
+    "required_null"
+   ],
+   "columns": [
+    "entity_id",
+    "entity_id,period"
+   ],
+   "data_date": "2026-04-14",
+   "product": "company.users_b"
+  },
+  {
+   "at": "2026-04-19T01:00:00",
+   "checks": [
+    "duplicate_key",
+    "required_null"
+   ],
+   "columns": [
+    "entity_id",
+    "entity_id,period"
+   ],
+   "data_date": "2026-04-18",
+   "product": "finance.prices_c"
+  },
+  {
+   "at": "2026-04-19T03:00:00",
+   "checks": [
+    "undeclared_pii"
+   ],
+   "columns": [
+    "note"
+   ],
+   "data_date": "2026-04-18",
+   "product": "finance.users_a"
+  },
+  {
+   "at": "2026-04-20T01:00:00",
+   "checks": [
+    "undeclared_pii"
+   ],
+   "columns": [
+    "note"
+   ],
+   "data_date": "2026-04-19",
+   "product": "survey.prices_a"
+  },
+  {
+   "at": "2026-04-22T01:00:00",
+   "checks": [
+    "duplicate_key",
+    "required_null"
+   ],
+   "columns": [
+    "entity_id",
+    "entity_id,period"
+   ],
+   "data_date": "2026-04-21",
+   "product": "market.new_4"
+  },
+  {
+   "at": "2026-04-22T02:00:00",
+   "checks": [
+    "duplicate_key",
+    "required_null"
+   ],
+   "columns": [
+    "entity_id",
+    "entity_id,period"
+   ],
+   "data_date": "2026-04-21",
+   "product": "content.revenue_a"
+  },
+  {
+   "at": "2026-04-22T20:00:00",
+   "checks": [
+    "scale_shift"
+   ],
+   "columns": [
+    "users_0"
+   ],
+   "data_date": "2026-04-21",
+   "product": "tracking.penetration_b"
+  },
+  {
+   "at": "2026-04-25T01:00:00",
+   "checks": [
+    "duplicate_key",
+    "required_null"
+   ],
+   "columns": [
+    "entity_id",
+    "entity_id,period"
+   ],
+   "data_date": "2026-04-24",
+   "product": "survey.revenue_c"
+  },
+  {
+   "at": "2026-04-26T01:00:00",
+   "checks": [
+    "scale_shift"
+   ],
+   "columns": [
+    "rankings_0"
+   ],
+   "data_date": "2026-04-25",
+   "product": "company.traffic_a"
+  },
+  {
+   "at": "2026-04-27T03:00:00",
+   "checks": [
+    "duplicate_key"
+   ],
+   "columns": [
+    "entity_id,period"
+   ],
+   "data_date": "2026-04-26",
+   "product": "market.rankings_a"
+  },
+  {
+   "at": "2026-04-28T03:00:00",
+   "checks": [
+    "duplicate_key"
+   ],
+   "columns": [
+    "entity_id,period"
+   ],
+   "data_date": "2026-04-27",
+   "product": "tracking.orders_a"
+  },
+  {
+   "at": "2026-04-30T01:00:00",
+   "checks": [
+    "duplicate_key"
+   ],
+   "columns": [
+    "entity_id,period"
+   ],
+   "data_date": "2026-04-29",
+   "product": "consumer.new_6"
+  },
+  {
+   "at": "2026-05-02T02:00:00",
+   "checks": [
+    "duplicate_key",
+    "required_null"
+   ],
+   "columns": [
+    "entity_id",
+    "entity_id,period"
+   ],
+   "data_date": "2026-05-01",
+   "product": "company.users_b"
+  },
+  {
+   "at": "2026-05-03T02:00:00",
+   "checks": [
+    "duplicate_key"
+   ],
+   "columns": [
+    "entity_id,period"
+   ],
+   "data_date": "2026-05-02",
+   "product": "finance.prices_c"
+  }
+ ],
+ "generated_from": "reports/dev.json",
+ "incidents": [
+  {
+   "closed_at": "2026-04-11T12:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-11T07:00:00",
+   "paged": true,
+   "product": "content.new_5",
+   "root": "content.new_5",
+   "team": "content-delivery"
+  },
+  {
+   "closed_at": "2026-04-11T16:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-11T07:00:00",
+   "paged": true,
+   "product": "health.brands_b",
+   "root": "health.brands_b",
+   "team": "health-data"
+  },
+  {
+   "closed_at": "2026-04-12T07:00:00",
+   "kind": "quality",
+   "opened_at": "2026-04-12T01:00:00",
+   "paged": true,
+   "product": "survey.prices_a",
+   "root": "survey.prices_a",
+   "team": "survey-data"
+  },
+  {
+   "closed_at": "2026-04-13T12:00:00",
+   "kind": "quality",
+   "opened_at": "2026-04-13T01:00:00",
+   "paged": true,
+   "product": "market.new_4",
+   "root": "market.new_4",
+   "team": "market-insights"
+  },
+  {
+   "closed_at": "2026-04-14T06:00:00",
+   "kind": "quality",
+   "opened_at": "2026-04-14T02:00:00",
+   "paged": true,
+   "product": "consumer.new_6",
+   "root": "consumer.new_6",
+   "team": "consumer-insights"
+  },
+  {
+   "closed_at": "2026-04-14T14:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-14T07:00:00",
+   "paged": true,
+   "product": "finance.prices_c",
+   "root": "finance.prices_c",
+   "team": "finance-revenue"
+  },
+  {
+   "closed_at": "2026-04-16T00:00:00",
+   "kind": "quality",
+   "opened_at": "2026-04-15T02:00:00",
+   "paged": true,
+   "product": "company.users_b",
+   "root": "company.users_b",
+   "team": "company-data"
+  },
+  {
+   "closed_at": "2026-04-16T00:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-15T07:00:00",
+   "paged": true,
+   "product": "company.users_b",
+   "root": "company.users_b",
+   "team": "company-data"
+  },
+  {
+   "closed_at": "2026-04-15T10:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-15T07:00:00",
+   "paged": true,
+   "product": "mobility.new_0",
+   "root": "mobility.new_0",
+   "team": "mobility-outlook"
+  },
+  {
+   "closed_at": "2026-04-16T21:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-16T07:00:00",
+   "paged": true,
+   "product": "adsales.prices_a",
+   "root": "adsales.prices_a",
+   "team": "ad-sales"
+  },
+  {
+   "closed_at": "2026-04-16T14:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-16T07:00:00",
+   "paged": true,
+   "product": "mobility.rankings_a",
+   "root": "mobility.rankings_a",
+   "team": "mobility-outlook"
+  },
+  {
+   "closed_at": "2026-04-17T18:00:00",
+   "kind": "quality",
+   "opened_at": "2026-04-17T01:00:00",
+   "paged": true,
+   "product": "consumer.spend_a",
+   "root": "consumer.spend_a",
+   "team": "consumer-insights"
+  },
+  {
+   "closed_at": "2026-04-17T10:00:00",
+   "kind": "quality",
+   "opened_at": "2026-04-17T02:00:00",
+   "paged": true,
+   "product": "tracking.new_9",
+   "root": "tracking.new_9",
+   "team": "ecommerce-tracking"
+  },
+  {
+   "closed_at": "2026-04-17T14:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-17T07:00:00",
+   "paged": true,
+   "product": "mobility.new_7",
+   "root": "mobility.new_7",
+   "team": "mobility-outlook"
+  },
+  {
+   "closed_at": "2026-04-18T14:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-18T07:00:00",
+   "paged": true,
+   "product": "consumer.new_6",
+   "root": "consumer.new_6",
+   "team": "consumer-insights"
+  },
+  {
+   "closed_at": "2026-04-19T15:00:00",
+   "kind": "quality",
+   "opened_at": "2026-04-19T01:00:00",
+   "paged": true,
+   "product": "finance.prices_c",
+   "root": "finance.prices_c",
+   "team": "finance-revenue"
+  },
+  {
+   "closed_at": "2026-04-20T00:00:00",
+   "kind": "quality",
+   "opened_at": "2026-04-19T03:00:00",
+   "paged": true,
+   "product": "finance.users_a",
+   "root": "finance.users_a",
+   "team": "finance-revenue"
+  },
+  {
+   "closed_at": "2026-04-20T02:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-19T07:00:00",
+   "paged": true,
+   "product": "company.users_b",
+   "root": "company.users_b",
+   "team": "company-data"
+  },
+  {
+   "closed_at": "2026-04-19T15:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-19T07:00:00",
+   "paged": true,
+   "product": "finance.prices_c",
+   "root": "finance.prices_c",
+   "team": "finance-revenue"
+  },
+  {
+   "closed_at": "2026-04-20T00:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-19T07:00:00",
+   "paged": true,
+   "product": "finance.users_a",
+   "root": "finance.users_a",
+   "team": "finance-revenue"
+  },
+  {
+   "closed_at": "2026-04-20T11:00:00",
+   "kind": "quality",
+   "opened_at": "2026-04-20T01:00:00",
+   "paged": true,
+   "product": "survey.prices_a",
+   "root": "survey.prices_a",
+   "team": "survey-data"
+  },
+  {
+   "closed_at": "2026-04-20T11:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-20T07:00:00",
+   "paged": true,
+   "product": "survey.prices_a",
+   "root": "survey.prices_a",
+   "team": "survey-data"
+  },
+  {
+   "closed_at": "2026-04-23T00:00:00",
+   "kind": "quality",
+   "opened_at": "2026-04-22T01:00:00",
+   "paged": true,
+   "product": "market.new_4",
+   "root": "market.new_4",
+   "team": "market-insights"
+  },
+  {
+   "closed_at": "2026-04-22T19:00:00",
+   "kind": "quality",
+   "opened_at": "2026-04-22T02:00:00",
+   "paged": true,
+   "product": "content.revenue_a",
+   "root": "content.revenue_a",
+   "team": "content-delivery"
+  },
+  {
+   "closed_at": "2026-04-22T14:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-22T07:00:00",
+   "paged": false,
+   "product": "content.panel_b",
+   "root": "finance.orders_b",
+   "team": "finance-revenue"
+  },
+  {
+   "closed_at": "2026-04-22T19:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-22T07:00:00",
+   "paged": true,
+   "product": "content.revenue_a",
+   "root": "content.revenue_a",
+   "team": "content-delivery"
+  },
+  {
+   "closed_at": "2026-04-22T13:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-22T07:00:00",
+   "paged": true,
+   "product": "finance.orders_b",
+   "root": "finance.orders_b",
+   "team": "finance-revenue"
+  },
+  {
+   "closed_at": "2026-04-23T00:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-22T07:00:00",
+   "paged": true,
+   "product": "market.new_4",
+   "root": "market.new_4",
+   "team": "market-insights"
+  },
+  {
+   "closed_at": "2026-04-23T01:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-22T07:00:00",
+   "paged": true,
+   "product": "tracking.penetration_b",
+   "root": "tracking.penetration_b",
+   "team": "ecommerce-tracking"
+  },
+  {
+   "closed_at": "2026-04-23T01:00:00",
+   "kind": "quality",
+   "opened_at": "2026-04-22T20:00:00",
+   "paged": true,
+   "product": "tracking.penetration_b",
+   "root": "tracking.penetration_b",
+   "team": "ecommerce-tracking"
+  },
+  {
+   "closed_at": "2026-04-23T09:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-23T07:00:00",
+   "paged": true,
+   "product": "consumer.new_2",
+   "root": "consumer.new_2",
+   "team": "consumer-insights"
+  },
+  {
+   "closed_at": "2026-04-25T12:00:00",
+   "kind": "quality",
+   "opened_at": "2026-04-25T01:00:00",
+   "paged": true,
+   "product": "survey.revenue_c",
+   "root": "survey.revenue_c",
+   "team": "survey-data"
+  },
+  {
+   "closed_at": "2026-04-25T13:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-25T07:00:00",
+   "paged": false,
+   "product": "market.rankings_a",
+   "root": "survey.revenue_c",
+   "team": "survey-data"
+  },
+  {
+   "closed_at": "2026-04-25T13:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-25T07:00:00",
+   "paged": false,
+   "product": "market.shipments_b",
+   "root": "survey.revenue_c",
+   "team": "survey-data"
+  },
+  {
+   "closed_at": "2026-04-25T09:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-25T07:00:00",
+   "paged": true,
+   "product": "mobility.rankings_a",
+   "root": "mobility.rankings_a",
+   "team": "mobility-outlook"
+  },
+  {
+   "closed_at": "2026-04-25T12:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-25T07:00:00",
+   "paged": true,
+   "product": "survey.revenue_c",
+   "root": "survey.revenue_c",
+   "team": "survey-data"
+  },
+  {
+   "closed_at": "2026-04-25T14:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-25T07:00:00",
+   "paged": false,
+   "product": "tracking.orders_a",
+   "root": "survey.revenue_c",
+   "team": "survey-data"
+  },
+  {
+   "closed_at": "2026-04-26T16:00:00",
+   "kind": "quality",
+   "opened_at": "2026-04-26T01:00:00",
+   "paged": true,
+   "product": "company.traffic_a",
+   "root": "company.traffic_a",
+   "team": "company-data"
+  },
+  {
+   "closed_at": "2026-04-26T04:00:00",
+   "kind": "quality",
+   "opened_at": "2026-04-26T01:00:00",
+   "paged": true,
+   "product": "consumer.spend_a",
+   "root": "consumer.spend_a",
+   "team": "consumer-insights"
+  },
+  {
+   "closed_at": "2026-04-26T16:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-26T07:00:00",
+   "paged": true,
+   "product": "company.traffic_a",
+   "root": "company.traffic_a",
+   "team": "company-data"
+  },
+  {
+   "closed_at": "2026-04-26T12:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-26T07:00:00",
+   "paged": true,
+   "product": "finance.new_8",
+   "root": "finance.new_8",
+   "team": "finance-revenue"
+  },
+  {
+   "closed_at": "2026-04-26T17:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-26T07:00:00",
+   "paged": false,
+   "product": "tracking.orders_a",
+   "root": "company.traffic_a",
+   "team": "company-data"
+  },
+  {
+   "closed_at": "2026-04-27T06:00:00",
+   "kind": "quality",
+   "opened_at": "2026-04-27T03:00:00",
+   "paged": true,
+   "product": "market.rankings_a",
+   "root": "market.rankings_a",
+   "team": "market-insights"
+  },
+  {
+   "closed_at": "2026-04-28T07:00:00",
+   "kind": "quality",
+   "opened_at": "2026-04-28T03:00:00",
+   "paged": true,
+   "product": "tracking.orders_a",
+   "root": "tracking.orders_a",
+   "team": "ecommerce-tracking"
+  },
+  {
+   "closed_at": "2026-04-28T17:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-28T07:00:00",
+   "paged": true,
+   "product": "finance.new_8",
+   "root": "finance.new_8",
+   "team": "finance-revenue"
+  },
+  {
+   "closed_at": "2026-04-29T09:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-29T07:00:00",
+   "paged": true,
+   "product": "content.new_5",
+   "root": "content.new_5",
+   "team": "content-delivery"
+  },
+  {
+   "closed_at": "2026-04-30T18:00:00",
+   "kind": "quality",
+   "opened_at": "2026-04-30T01:00:00",
+   "paged": true,
+   "product": "consumer.new_6",
+   "root": "consumer.new_6",
+   "team": "consumer-insights"
+  },
+  {
+   "closed_at": "2026-05-01T01:00:00",
+   "kind": "quality",
+   "opened_at": "2026-04-30T02:00:00",
+   "paged": true,
+   "product": "content.revenue_a",
+   "root": "content.revenue_a",
+   "team": "content-delivery"
+  },
+  {
+   "closed_at": "2026-05-01T01:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-30T07:00:00",
+   "paged": true,
+   "product": "adsales.prices_a",
+   "root": "adsales.prices_a",
+   "team": "ad-sales"
+  },
+  {
+   "closed_at": "2026-04-30T18:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-04-30T07:00:00",
+   "paged": true,
+   "product": "consumer.new_6",
+   "root": "consumer.new_6",
+   "team": "consumer-insights"
+  },
+  {
+   "closed_at": "2026-05-02T21:00:00",
+   "kind": "quality",
+   "opened_at": "2026-05-02T02:00:00",
+   "paged": true,
+   "product": "company.users_b",
+   "root": "company.users_b",
+   "team": "company-data"
+  },
+  {
+   "closed_at": "2026-05-02T21:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-05-02T07:00:00",
+   "paged": true,
+   "product": "company.users_b",
+   "root": "company.users_b",
+   "team": "company-data"
+  },
+  {
+   "closed_at": "2026-05-02T13:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-05-02T07:00:00",
+   "paged": true,
+   "product": "survey.prices_a",
+   "root": "survey.prices_a",
+   "team": "survey-data"
+  },
+  {
+   "closed_at": "2026-05-03T10:00:00",
+   "kind": "quality",
+   "opened_at": "2026-05-03T02:00:00",
+   "paged": true,
+   "product": "finance.prices_c",
+   "root": "finance.prices_c",
+   "team": "finance-revenue"
+  },
+  {
+   "closed_at": "2026-05-03T10:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-05-03T07:00:00",
+   "paged": true,
+   "product": "finance.prices_c",
+   "root": "finance.prices_c",
+   "team": "finance-revenue"
+  },
+  {
+   "closed_at": "2026-05-04T03:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-05-03T07:00:00",
+   "paged": false,
+   "product": "market.shipments_b",
+   "root": "survey.traffic_b",
+   "team": "survey-data"
+  },
+  {
+   "closed_at": "2026-05-04T00:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-05-03T07:00:00",
+   "paged": true,
+   "product": "mobility.new_0",
+   "root": "mobility.new_0",
+   "team": "mobility-outlook"
+  },
+  {
+   "closed_at": "2026-05-04T02:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-05-03T07:00:00",
+   "paged": true,
+   "product": "survey.traffic_b",
+   "root": "survey.traffic_b",
+   "team": "survey-data"
+  },
+  {
+   "closed_at": "2026-05-04T04:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-05-03T07:00:00",
+   "paged": false,
+   "product": "tracking.orders_a",
+   "root": "survey.traffic_b",
+   "team": "survey-data"
+  },
+  {
+   "closed_at": "2026-05-04T16:00:00",
+   "kind": "freshness",
+   "opened_at": "2026-05-04T07:00:00",
+   "paged": true,
+   "product": "company.revenue_c",
+   "root": "company.revenue_c",
+   "team": "company-data"
+  }
+ ],
+ "ledger": [
+  {
+   "baseline": "138",
+   "label": "Bad deliveries whose rows reached consumers",
+   "note": "of 138 planted (duplicate keys, missing keys, values out of range, personal data in free text, values in thousands)",
+   "platform": "3"
+  },
+  {
+   "baseline": "5,165",
+   "label": "Hours bad data was readable",
+   "note": "until a corrected delivery replaced it; with gates, all of it is the 3 misses, which no check flagged and so nobody corrected",
+   "platform": "4,317"
+  },
+  {
+   "baseline": "160",
+   "label": "Personal data published in a column not declared as personal",
+   "note": "values; 10 deliveries carried e-mail addresses or phone numbers in free text",
+   "platform": "0"
+  },
+  {
+   "baseline": "10",
+   "label": "Breaking contract changes that reached a consumer",
+   "note": "of 13 that removed, renamed, retyped or re-united a column someone reads",
+   "platform": "0"
+  },
+  {
+   "baseline": "7",
+   "label": "Onboarding mistakes that went live",
+   "note": "of 7; 7 fixed by the team from the message alone",
+   "platform": "0"
+  },
+  {
+   "baseline": "7,639",
+   "label": "Credits burnt by runaway queries and oversized warehouses",
+   "note": "6 episodes; the team was told after a median 19.5 h against 198.0 h",
+   "platform": "877"
+  },
+  {
+   "baseline": "38.6%",
+   "label": "Spend nobody could attribute to a team",
+   "note": "same usage, two methods: tag, role, user and warehouse against query tags alone",
+   "platform": "3.3%"
+  },
+  {
+   "baseline": "1,157",
+   "label": "Hours products were staler than their SLA",
+   "note": "the price of holding bad data back: consumers wait for the corrected delivery",
+   "platform": "2,079"
+  }
+ ],
+ "products": [
+  {
+   "agent_ready": true,
+   "classification": "internal",
+   "domain": "adsales",
+   "id": "adsales.prices_a",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api",
+    "mcp",
+    "a2a"
+   ],
+   "quarantined": 4,
+   "team": "ad-sales",
+   "version": "2.0.0"
+  },
+  {
+   "agent_ready": false,
+   "classification": "public",
+   "domain": "adsales",
+   "id": "adsales.revenue_b",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api"
+   ],
+   "quarantined": 3,
+   "team": "ad-sales",
+   "version": "1.1.0"
+  },
+  {
+   "agent_ready": true,
+   "classification": "internal",
+   "domain": "company",
+   "id": "company.revenue_c",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api",
+    "mcp",
+    "a2a",
+    "kafka"
+   ],
+   "quarantined": 5,
+   "team": "company-data",
+   "version": "1.0.0"
+  },
+  {
+   "agent_ready": false,
+   "classification": "confidential",
+   "domain": "company",
+   "id": "company.traffic_a",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api"
+   ],
+   "quarantined": 2,
+   "team": "company-data",
+   "version": "1.0.0"
+  },
+  {
+   "agent_ready": false,
+   "classification": "public",
+   "domain": "company",
+   "id": "company.users_b",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api",
+    "kafka"
+   ],
+   "quarantined": 4,
+   "team": "company-data",
+   "version": "1.2.0"
+  },
+  {
+   "agent_ready": false,
+   "classification": "confidential",
+   "domain": "consumer",
+   "id": "consumer.new_2",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api"
+   ],
+   "quarantined": 0,
+   "team": "consumer-insights",
+   "version": "1.0.0"
+  },
+  {
+   "agent_ready": false,
+   "classification": "confidential",
+   "domain": "consumer",
+   "id": "consumer.new_6",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api"
+   ],
+   "quarantined": 1,
+   "team": "consumer-insights",
+   "version": "1.0.0"
+  },
+  {
+   "agent_ready": false,
+   "classification": "confidential",
+   "domain": "consumer",
+   "id": "consumer.revenue_b",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api"
+   ],
+   "quarantined": 4,
+   "team": "consumer-insights",
+   "version": "1.2.0"
+  },
+  {
+   "agent_ready": false,
+   "classification": "internal",
+   "domain": "consumer",
+   "id": "consumer.spend_a",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api"
+   ],
+   "quarantined": 3,
+   "team": "consumer-insights",
+   "version": "2.1.0"
+  },
+  {
+   "agent_ready": true,
+   "classification": "internal",
+   "domain": "content",
+   "id": "content.new_5",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api",
+    "mcp"
+   ],
+   "quarantined": 0,
+   "team": "content-delivery",
+   "version": "1.0.0"
+  },
+  {
+   "agent_ready": true,
+   "classification": "public",
+   "domain": "content",
+   "id": "content.panel_b",
+   "inputs": [
+    "finance.orders_b",
+    "mobility.brands_c"
+   ],
+   "latest": "2026-05-03",
+   "ports": [
+    "api",
+    "mcp",
+    "a2a",
+    "kafka"
+   ],
+   "quarantined": 2,
+   "team": "content-delivery",
+   "version": "1.1.0"
+  },
+  {
+   "agent_ready": false,
+   "classification": "internal",
+   "domain": "content",
+   "id": "content.revenue_a",
+   "inputs": [
+    "mobility.orders_b"
+   ],
+   "latest": "2026-05-03",
+   "ports": [
+    "api",
+    "kafka"
+   ],
+   "quarantined": 4,
+   "team": "content-delivery",
+   "version": "1.3.0"
+  },
+  {
+   "agent_ready": true,
+   "classification": "public",
+   "domain": "finance",
+   "id": "finance.new_8",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api",
+    "mcp"
+   ],
+   "quarantined": 0,
+   "team": "finance-revenue",
+   "version": "1.0.0"
+  },
+  {
+   "agent_ready": true,
+   "classification": "public",
+   "domain": "finance",
+   "id": "finance.orders_b",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api",
+    "mcp",
+    "a2a"
+   ],
+   "quarantined": 2,
+   "team": "finance-revenue",
+   "version": "2.0.0"
+  },
+  {
+   "agent_ready": false,
+   "classification": "confidential",
+   "domain": "finance",
+   "id": "finance.prices_c",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api"
+   ],
+   "quarantined": 6,
+   "team": "finance-revenue",
+   "version": "1.0.0"
+  },
+  {
+   "agent_ready": false,
+   "classification": "confidential",
+   "domain": "finance",
+   "id": "finance.users_a",
+   "inputs": [
+    "health.brands_a"
+   ],
+   "latest": "2026-05-03",
+   "ports": [
+    "api"
+   ],
+   "quarantined": 3,
+   "team": "finance-revenue",
+   "version": "4.1.0"
+  },
+  {
+   "agent_ready": false,
+   "classification": "public",
+   "domain": "health",
+   "id": "health.brands_a",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api"
+   ],
+   "quarantined": 2,
+   "team": "health-data",
+   "version": "1.2.0"
+  },
+  {
+   "agent_ready": false,
+   "classification": "internal",
+   "domain": "health",
+   "id": "health.brands_b",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api"
+   ],
+   "quarantined": 4,
+   "team": "health-data",
+   "version": "1.0.0"
+  },
+  {
+   "agent_ready": true,
+   "classification": "internal",
+   "domain": "market",
+   "id": "market.new_4",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api",
+    "mcp"
+   ],
+   "quarantined": 2,
+   "team": "market-insights",
+   "version": "1.1.0"
+  },
+  {
+   "agent_ready": false,
+   "classification": "internal",
+   "domain": "market",
+   "id": "market.rankings_a",
+   "inputs": [
+    "survey.revenue_c"
+   ],
+   "latest": "2026-05-03",
+   "ports": [
+    "api"
+   ],
+   "quarantined": 6,
+   "team": "market-insights",
+   "version": "1.5.0"
+  },
+  {
+   "agent_ready": true,
+   "classification": "internal",
+   "domain": "market",
+   "id": "market.shipments_b",
+   "inputs": [
+    "survey.revenue_c",
+    "survey.traffic_b"
+   ],
+   "latest": "2026-05-03",
+   "ports": [
+    "api",
+    "mcp",
+    "a2a"
+   ],
+   "quarantined": 1,
+   "team": "market-insights",
+   "version": "1.2.0"
+  },
+  {
+   "agent_ready": false,
+   "classification": "internal",
+   "domain": "mobility",
+   "id": "mobility.brands_c",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api",
+    "kafka"
+   ],
+   "quarantined": 3,
+   "team": "mobility-outlook",
+   "version": "1.1.0"
+  },
+  {
+   "agent_ready": true,
+   "classification": "internal",
+   "domain": "mobility",
+   "id": "mobility.new_0",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api",
+    "mcp"
+   ],
+   "quarantined": 2,
+   "team": "mobility-outlook",
+   "version": "1.0.0"
+  },
+  {
+   "agent_ready": true,
+   "classification": "internal",
+   "domain": "mobility",
+   "id": "mobility.new_3",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api",
+    "mcp"
+   ],
+   "quarantined": 4,
+   "team": "mobility-outlook",
+   "version": "2.1.0"
+  },
+  {
+   "agent_ready": true,
+   "classification": "public",
+   "domain": "mobility",
+   "id": "mobility.new_7",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api",
+    "mcp"
+   ],
+   "quarantined": 1,
+   "team": "mobility-outlook",
+   "version": "1.1.0"
+  },
+  {
+   "agent_ready": true,
+   "classification": "public",
+   "domain": "mobility",
+   "id": "mobility.orders_b",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api",
+    "mcp",
+    "a2a",
+    "kafka"
+   ],
+   "quarantined": 3,
+   "team": "mobility-outlook",
+   "version": "1.1.0"
+  },
+  {
+   "agent_ready": false,
+   "classification": "confidential",
+   "domain": "mobility",
+   "id": "mobility.rankings_a",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api",
+    "kafka"
+   ],
+   "quarantined": 4,
+   "team": "mobility-outlook",
+   "version": "1.0.0"
+  },
+  {
+   "agent_ready": true,
+   "classification": "internal",
+   "domain": "survey",
+   "id": "survey.new_1",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api",
+    "mcp"
+   ],
+   "quarantined": 2,
+   "team": "survey-data",
+   "version": "1.0.0"
+  },
+  {
+   "agent_ready": false,
+   "classification": "internal",
+   "domain": "survey",
+   "id": "survey.prices_a",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api",
+    "kafka"
+   ],
+   "quarantined": 5,
+   "team": "survey-data",
+   "version": "1.1.0"
+  },
+  {
+   "agent_ready": false,
+   "classification": "public",
+   "domain": "survey",
+   "id": "survey.revenue_c",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api",
+    "kafka"
+   ],
+   "quarantined": 3,
+   "team": "survey-data",
+   "version": "1.2.0"
+  },
+  {
+   "agent_ready": false,
+   "classification": "confidential",
+   "domain": "survey",
+   "id": "survey.traffic_b",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api"
+   ],
+   "quarantined": 2,
+   "team": "survey-data",
+   "version": "1.1.0"
+  },
+  {
+   "agent_ready": true,
+   "classification": "internal",
+   "domain": "tracking",
+   "id": "tracking.new_9",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api",
+    "mcp"
+   ],
+   "quarantined": 0,
+   "team": "ecommerce-tracking",
+   "version": "1.1.0"
+  },
+  {
+   "agent_ready": false,
+   "classification": "internal",
+   "domain": "tracking",
+   "id": "tracking.orders_a",
+   "inputs": [
+    "company.traffic_a",
+    "market.shipments_b"
+   ],
+   "latest": "2026-05-03",
+   "ports": [
+    "api",
+    "kafka"
+   ],
+   "quarantined": 5,
+   "team": "ecommerce-tracking",
+   "version": "1.1.0"
+  },
+  {
+   "agent_ready": false,
+   "classification": "confidential",
+   "domain": "tracking",
+   "id": "tracking.penetration_b",
+   "inputs": [],
+   "latest": "2026-05-03",
+   "ports": [
+    "api",
+    "kafka"
+   ],
+   "quarantined": 2,
+   "team": "ecommerce-tracking",
+   "version": "1.0.0"
+  }
+ ],
+ "rejected_changes": [
+  {
+   "at": "2026-04-18T10:00:00",
+   "product": "mobility.brands_c",
+   "to": null,
+   "violations": [
+    {
+     "fix": "see products/ for the reference descriptors",
+     "msg": "Value error, columns declared twice: rankings_1_v2",
+     "rule": "schema"
+    }
+   ]
+  },
+  {
+   "at": "2026-04-19T10:00:00",
+   "product": "mobility.brands_c",
+   "to": null,
+   "violations": [
+    {
+     "fix": "see products/ for the reference descriptors",
+     "msg": "Value error, columns declared twice: rankings_1_v2",
+     "rule": "schema"
+    }
+   ]
+  },
+  {
+   "at": "2026-04-20T10:00:00",
+   "product": "market.rankings_a",
+   "to": "2.0.0",
+   "violations": [
+    {
+     "fix": "keep the column and add the new one next to it, or publish the new shape as a separate major version and move consumers first",
+     "msg": "unit_changed on extra_7 breaks human:survey-data, service:statista-connect",
+     "rule": "consumers"
+    }
+   ]
+  },
+  {
+   "at": "2026-04-20T10:00:00",
+   "product": "mobility.brands_c",
+   "to": null,
+   "violations": [
+    {
+     "fix": "see products/ for the reference descriptors",
+     "msg": "Value error, columns declared twice: rankings_1_v2",
+     "rule": "schema"
+    }
+   ]
+  },
+  {
+   "at": "2026-04-20T10:00:00",
+   "product": "survey.revenue_c",
+   "to": "1.2.0",
+   "violations": [
+    {
+     "fix": "keep the column and add the new one next to it, or publish the new shape as a separate major version and move consumers first",
+     "msg": "unit_changed on rankings_0 breaks human:market-insights, human:survey-data, market.rankings_a, service:bi-dashboards",
+     "rule": "consumers"
+    },
+    {
+     "fix": "bump the major version",
+     "msg": "breaking change (unit_changed) in a minor version",
+     "rule": "major"
+    }
+   ]
+  },
+  {
+   "at": "2026-04-21T10:00:00",
+   "product": "mobility.brands_c",
+   "to": null,
+   "violations": [
+    {
+     "fix": "see products/ for the reference descriptors",
+     "msg": "Value error, columns declared twice: rankings_1_v2",
+     "rule": "schema"
+    }
+   ]
+  },
+  {
+   "at": "2026-04-22T10:00:00",
+   "product": "mobility.brands_c",
+   "to": null,
+   "violations": [
+    {
+     "fix": "see products/ for the reference descriptors",
+     "msg": "Value error, columns declared twice: rankings_1_v2",
+     "rule": "schema"
+    }
+   ]
+  },
+  {
+   "at": "2026-04-23T10:00:00",
+   "product": "mobility.brands_c",
+   "to": null,
+   "violations": [
+    {
+     "fix": "see products/ for the reference descriptors",
+     "msg": "Value error, columns declared twice: rankings_1_v2",
+     "rule": "schema"
+    }
+   ]
+  },
+  {
+   "at": "2026-04-24T10:00:00",
+   "product": "mobility.brands_c",
+   "to": null,
+   "violations": [
+    {
+     "fix": "see products/ for the reference descriptors",
+     "msg": "Value error, columns declared twice: rankings_1_v2",
+     "rule": "schema"
+    }
+   ]
+  },
+  {
+   "at": "2026-04-25T10:00:00",
+   "product": "mobility.brands_c",
+   "to": null,
+   "violations": [
+    {
+     "fix": "see products/ for the reference descriptors",
+     "msg": "Value error, columns declared twice: rankings_1_v2",
+     "rule": "schema"
+    }
+   ]
+  },
+  {
+   "at": "2026-04-26T10:00:00",
+   "product": "mobility.brands_c",
+   "to": null,
+   "violations": [
+    {
+     "fix": "see products/ for the reference descriptors",
+     "msg": "Value error, columns declared twice: rankings_1_v2",
+     "rule": "schema"
+    }
+   ]
+  },
+  {
+   "at": "2026-04-27T10:00:00",
+   "product": "mobility.brands_c",
+   "to": null,
+   "violations": [
+    {
+     "fix": "see products/ for the reference descriptors",
+     "msg": "Value error, columns declared twice: rankings_1_v2",
+     "rule": "schema"
+    }
+   ]
+  },
+  {
+   "at": "2026-04-28T10:00:00",
+   "product": "mobility.brands_c",
+   "to": null,
+   "violations": [
+    {
+     "fix": "see products/ for the reference descriptors",
+     "msg": "Value error, columns declared twice: rankings_1_v2",
+     "rule": "schema"
+    }
+   ]
+  },
+  {
+   "at": "2026-04-29T10:00:00",
+   "product": "mobility.brands_c",
+   "to": null,
+   "violations": [
+    {
+     "fix": "see products/ for the reference descriptors",
+     "msg": "Value error, columns declared twice: rankings_1_v2",
+     "rule": "schema"
+    }
+   ]
+  },
+  {
+   "at": "2026-04-30T10:00:00",
+   "product": "mobility.brands_c",
+   "to": null,
+   "violations": [
+    {
+     "fix": "see products/ for the reference descriptors",
+     "msg": "Value error, columns declared twice: rankings_1_v2",
+     "rule": "schema"
+    }
+   ]
+  },
+  {
+   "at": "2026-05-01T10:00:00",
+   "product": "mobility.brands_c",
+   "to": null,
+   "violations": [
+    {
+     "fix": "see products/ for the reference descriptors",
+     "msg": "Value error, columns declared twice: rankings_1_v2",
+     "rule": "schema"
+    }
+   ]
+  },
+  {
+   "at": "2026-05-02T10:00:00",
+   "product": "mobility.brands_c",
+   "to": null,
+   "violations": [
+    {
+     "fix": "see products/ for the reference descriptors",
+     "msg": "Value error, columns declared twice: rankings_1_v2",
+     "rule": "schema"
+    }
+   ]
+  },
+  {
+   "at": "2026-05-03T10:00:00",
+   "product": "mobility.brands_c",
+   "to": null,
+   "violations": [
+    {
+     "fix": "see products/ for the reference descriptors",
+     "msg": "Value error, columns declared twice: rankings_1_v2",
+     "rule": "schema"
+    }
+   ]
+  },
+  {
+   "at": "2026-05-04T10:00:00",
+   "product": "company.revenue_c",
+   "to": "2.0.0",
+   "violations": [
+    {
+     "fix": "keep the column and add the new one next to it, or publish the new shape as a separate major version and move consumers first",
+     "msg": "removed_column on penetration_1 breaks human:finance-revenue",
+     "rule": "consumers"
+    }
+   ]
+  },
+  {
+   "at": "2026-05-04T10:00:00",
+   "product": "mobility.brands_c",
+   "to": null,
+   "violations": [
+    {
+     "fix": "see products/ for the reference descriptors",
+     "msg": "Value error, columns declared twice: rankings_1_v2",
+     "rule": "schema"
+    }
+   ]
+  }
+ ],
+ "world": "dev"
+}

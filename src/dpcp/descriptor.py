@@ -45,9 +45,18 @@ class Column(BaseModel):
 
 
 class Contract(BaseModel):
-    version: str
+    version: str = Field(pattern=r"^[0-9]+\.[0-9]+\.[0-9]+$")
     key: list[str]
     columns: list[Column]
+
+    @field_validator("columns")
+    @classmethod
+    def _unique(cls, v: list[Column]) -> list[Column]:
+        names = [c.name for c in v]
+        dupes = sorted({n for n in names if names.count(n) > 1})
+        if dupes:
+            raise ValueError(f"columns declared twice: {', '.join(dupes)}")
+        return v
 
     @property
     def major(self) -> int:

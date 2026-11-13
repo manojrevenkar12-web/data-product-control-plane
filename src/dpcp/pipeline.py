@@ -47,6 +47,7 @@ class Pipeline:
         self.pii_min_share = g["pii_min_share"]
         self.scale_ratio = g["scale_ratio"]
         self.scale_days = g["scale_history_days"]
+        self.scale_min_days = g["scale_min_history_days"]
         self.row_share = g["row_quarantine_max_share"]
         self.platform = wh.schema("platform_schema")
         self.stage = wh.schema("staging_schema")
@@ -243,10 +244,13 @@ class Pipeline:
         meds = {k.partition("__")[2]: v for k, v in stats.items() if k.startswith("med__") and v is not None}
         if meds:
             hist = self.wh.rows(
-                f"select {', '.join(f'median({c.upper()}) as {c}' for c in meds)} from {self.core}.{d.table} "
+                f"select count(distinct _DATA_DATE) as DAYS__, "
+                f"{', '.join(f'median({c.upper()}) as {c}' for c in meds)} from {self.core}.{d.table} "
                 f"where _DATA_DATE >= %s and _DATA_DATE < %s",
                 (day - timedelta(days=self.scale_days), day),
             )[0]
+            if hist.pop("days__") < self.scale_min_days:
+                meds = {}
             for col, now_med in meds.items():
                 past = hist.get(col)
                 if past and now_med and (now_med / past >= self.scale_ratio or past / now_med >= self.scale_ratio):

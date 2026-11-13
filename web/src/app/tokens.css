@@ -1,0 +1,44 @@
+/* Theme tokens. Components use these names only; no raw colours or sizes outside this file. */
+:root {
+  --paper: #eef1f4;
+  --sheet: #f8fafb;
+  --ink: #14202b;
+  --ink-soft: #4a5866;
+  --rule: #cdd5dd;
+  --steel: #2f5d8a;        /* hallmark: passed */
+  --steel-wash: #dce6f0;
+  --assay-red: #a8322f;    /* held at the gate */
+  --assay-wash: #f4dfdc;
+  --brass: #8a6d22;        /* spend */
+  --brass-wash: #efe6cc;
+  --leaf: #2e6e52;         /* fresh */
+  --mute: #8794a1;
+
+  --font: "Schibsted Grotesk Variable", system-ui, sans-serif;
+  --step--1: 0.8125rem;
+  --step-0: 0.9375rem;
+  --step-1: 1.125rem;
+  --step-2: 1.5rem;
+  --step-3: 2.25rem;
+  --step-4: 3.375rem;
+  --leading-tight: 1.1;
+  --leading-body: 1.5;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2.5rem;
+  --space-7: 4rem;
+
+  --measure: 68ch;
+  --page: 72rem;
+  --radius-mark: 0.4rem;
+  --radius-panel: 0.25rem;
+  --border: 1px;
+  --border-strong: 2px;
+  --mark-size: 2.1rem;
+  --bar-height: 0.9rem;
+  --focus: 3px solid var(--steel);
+}

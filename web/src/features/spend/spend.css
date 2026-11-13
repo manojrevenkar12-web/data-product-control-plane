@@ -1,0 +1,16 @@
+.legend { list-style: none; display: flex; flex-wrap: wrap; gap: var(--space-4); padding: 0; margin: 0 0 var(--space-4); font-size: var(--step--1); color: var(--ink-soft); }
+.legend li { display: flex; align-items: center; gap: var(--space-2); }
+.legend .swatch { width: var(--space-4); height: var(--space-4); display: inline-block; }
+.bars { list-style: none; margin: 0; padding: var(--space-4) var(--space-5); display: grid; gap: var(--space-3); }
+.bars li { display: grid; grid-template-columns: minmax(8rem, 12rem) 1fr minmax(3rem, max-content); gap: var(--space-4); align-items: center; }
+.bars .team { font-size: var(--step--1); }
+.bars .credits { text-align: right; font-weight: 650; font-variant-numeric: tabular-nums; }
+.bar { display: flex; height: var(--bar-height); background: var(--paper); }
+.swatch.tag { background: var(--steel); }
+.swatch.role { background: var(--leaf); }
+.swatch.user { background: var(--brass); }
+.swatch.warehouse { background: var(--ink-soft); }
+.swatch.idle { background: var(--brass-wash); }
+.swatch.none { background: var(--assay-red); }
+.alerts { margin: var(--space-4) 0 0; padding-left: var(--space-5); color: var(--ink-soft); max-width: var(--measure); }
+@media (max-width: 40rem) { .bars li { grid-template-columns: 1fr; gap: var(--space-1); } }

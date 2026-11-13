@@ -356,8 +356,7 @@ def console(r, batches, incidents) -> dict:
                     "at": b["decided_at"].isoformat(),
                     "product": b["product"],
                     "data_date": str(b["data_date"]),
-                    "checks": sorted({x["check"] for x in f}),
-                    "columns": sorted({x["column"] for x in f if x["column"]}),
+                    "findings": [{"check": x["check"], "column": x["column"]} for x in f],
                 }
             )
     changes = r.wh.rows(

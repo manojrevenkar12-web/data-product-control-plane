@@ -1,0 +1,43 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - uses: open-policy-agent/setup-opa@v2
+        with: { version: "1.10.1" }
+      - run: pip install -e '.[dev]'
+      - run: ruff check src tests scripts
+      - run: opa check --v1-compatible policies && opa test policies -v
+      - run: pytest -q
+      - name: Reference descriptors pass their own policies
+        run: dpcp check products/
+      - name: README and dashboard data match the committed reports
+        run: |
+          python scripts/readme.py
+          git diff --exit-code README.md web/public/data/console.json
+  terraform:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - uses: hashicorp/setup-terraform@v3
+      - run: pip install -e .
+      - run: dpcp render products/
+      - run: terraform fmt -check -recursive infra
+      - working-directory: infra/envs/prod
+        run: terraform init -backend=false && terraform validate
+  web:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: web } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "22", cache: npm, cache-dependency-path: web/package-lock.json }
+      - run: npm ci
+      - run: npm run build
+      - run: npm test

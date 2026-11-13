@@ -55,7 +55,7 @@ def test_same_file_is_loaded_once(wh, products):
 def test_bad_deliveries_are_quarantined(wh, products):
     wh.settings.raw["gates"]["row_quarantine_max_share"] = 0.0
     pipe, d = setup(wh, products)
-    for i, day in enumerate([date(2026, 1, x) for x in range(1, 6)]):
+    for i, day in enumerate([date(2026, 1, x) for x in range(1, 9)]):  # 8 days of history
         deliver(pipe, d, day, rows(), tag=f"g{i}")
     cases = {
         "required_null": rows(respondent_id=lambda i: None if i == 3 else f"r{i}"),
@@ -65,11 +65,18 @@ def test_bad_deliveries_are_quarantined(wh, products):
         "scale_shift": rows(monthly_spend=lambda i: (100.0 + i) * 1000),
     }
     for check, rws in cases.items():
-        res = deliver(pipe, d, date(2026, 1, 6), rws, tag=check)
+        res = deliver(pipe, d, date(2026, 1, 9), rws, tag=check)
         assert res["status"] == "quarantined", check
         assert check in {f["check"] for f in res["findings"]}, (check, res["findings"])
-    live = wh.run(f"select count(*) from {pipe.core}.{d.table} where _DATA_DATE = '2026-01-06'")[0][0]
+    live = wh.run(f"select count(*) from {pipe.core}.{d.table} where _DATA_DATE = '2026-01-09'")[0][0]
     assert live == 0
+
+
+def test_no_scale_check_without_enough_history(wh, products):
+    pipe, d = setup(wh, products)
+    deliver(pipe, d, date(2026, 1, 1), rows(monthly_spend=lambda i: (100.0 + i) * 1000), tag="first")
+    for x in range(2, 6):  # a bad first day must not make every normal day after it look shifted
+        assert deliver(pipe, d, date(2026, 1, x), rows(), tag=f"n{x}")["status"] == "published"
 
 
 def test_row_scoped_findings_publish_the_valid_rows(wh, products):

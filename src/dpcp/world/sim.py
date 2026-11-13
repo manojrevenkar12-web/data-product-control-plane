@@ -397,11 +397,15 @@ class World:
         major, minor, patch = (int(x) for x in doc["contract"]["version"].split("."))
         if breaking:
             target = r.choice(metrics)
+            original = target["name"]
             kind = r.choice(["removed_column", "renamed_column", "unit_changed", "type_changed"])
             if kind == "removed_column":
                 cols.remove(target)
             elif kind == "renamed_column":
-                target["name"] = target["name"] + "_v2"
+                taken, k = {c["name"] for c in cols}, 2
+                while f"{target['name']}_v{k}" in taken:
+                    k += 1
+                target["name"] = f"{target['name']}_v{k}"
             elif kind == "unit_changed":
                 target["unit"] = "k" + (target.get("unit") or "")
             else:
@@ -409,14 +413,12 @@ class World:
                 target.pop("min", None)
             bump_major = r.random() < 0.3
             doc["contract"]["version"] = f"{major + 1}.0.0" if bump_major else f"{major}.{minor + 1}.0"
-            affected = sorted(
-                c for c, colset in self.readers(pid).items() if target["name"].removesuffix("_v2") in colset
-            )
+            affected = sorted(c for c, colset in self.readers(pid).items() if original in colset)
             truth = {
                 "product": pid,
                 "breaking": True,
                 "kind": kind,
-                "column": target["name"].removesuffix("_v2"),
+                "column": original,
                 "consumers": affected,
                 "proposed_at": now,
                 "major": bump_major,
@@ -468,6 +470,10 @@ class World:
             del self.pending_changes[pid]
             return None
         rules = {v["rule"] for v in violations}
+        if "schema" in rules:  # the team's own file does not parse: it rewrites the change from scratch later
+            pending["truth"]["outcome"] = "withdrawn"
+            del self.pending_changes[pid]
+            return None
         doc = copy.deepcopy(self.products[pid])
         old = {c["name"]: c for c in doc["contract"]["columns"]}
         new_doc = pending["doc"]
@@ -475,11 +481,13 @@ class World:
         if "consumers" in rules:
             # follow the fix: keep every column consumers read, add the new shape next to it
             cols = doc["contract"]["columns"]
+            read = {n for s in self.readers(pid).values() for n in s}
             for c in new_doc["contract"]["columns"]:
-                if c["name"] not in old:
-                    cols.append(c)
-                elif c != old[c["name"]] and c["name"] in {n for s in self.readers(pid).values() for n in s}:
-                    cols.append({**c, "name": c["name"] + "_new"})
+                name = c["name"] if c["name"] not in old else c["name"] + "_new"
+                if name in {x["name"] for x in cols}:
+                    continue
+                if c["name"] not in old or (c != old[c["name"]] and c["name"] in read):
+                    cols.append({**c, "name": name})
             doc["contract"]["version"] = f"{major}.{minor + 1}.0"
         elif rules & {"major", "version"}:
             doc = new_doc

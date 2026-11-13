@@ -15,6 +15,7 @@ enabled = true               # false = the monitoring-only design: checks run af
 pii_min_share = 0.02         # a string column is "PII-looking" when at least this share of sampled values match
 scale_ratio = 50             # a numeric column whose median moves by this factor against its recent history
 scale_history_days = 14
+scale_min_history_days = 7   # fewer days of history than this: no scale check (a bad first day must not become the norm)
 # Row-scoped findings (a missing required value, a value out of range) can be handled per row: publish the valid
 # rows, keep the others in staging and tell the producer. Batch-scoped findings (duplicates, a scale shift, personal
 # data) always hold the whole delivery back. Set to 0 to hold every delivery with any finding.
