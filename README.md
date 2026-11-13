@@ -36,7 +36,7 @@ kept apart. The same world runs against two designs:
 | Spend nobody could attribute to a team <br><sub>same usage, two methods: tag, role, user and warehouse against query tags alone</sub> | **3.3%** | 38.6% |
 | Hours products were staler than their SLA <br><sub>the price of holding bad data back: consumers wait for the corrected delivery</sub> | **2,079** | 1,157 |
 
-- **34 products** from 10 teams, 3,753 deliveries, 3,753 batches decided, 175 OPA evaluations.
+- **34 products** from 10 teams, 3,753 deliveries, 3,753 batches decided, 181 OPA evaluations.
 - **Clean deliveries held by mistake:** 0 of 3,615.
 - **Row-level quarantine:** 41 deliveries published their valid rows and held the rest, instead of holding the whole day.
 - **Same rows through API, MCP and A2A:** 25 of 25 agent reads; products not offered to agents hidden from them: 20/20.

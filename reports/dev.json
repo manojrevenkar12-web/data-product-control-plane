@@ -131,8 +131,8 @@
   "platform": {
     "access": {
       "change_decisions": {
-        "accepted": 74,
-        "rejected": 68
+        "accepted": 76,
+        "rejected": 26
       },
       "grants": 58,
       "unmasked_grants_outside_domain": 0
@@ -190,16 +190,16 @@
       "tables": 34
     },
     "changes": {
-      "additive": 22,
-      "additive_accepted_first_time": 22,
+      "additive": 23,
+      "additive_accepted_first_time": 23,
       "breaking_reached_consumers": 0,
       "breaking_with_consumers": 13,
       "breaking_without_consumers": 7,
       "consumer_breakages": 0,
       "mean_rounds": 1.43,
       "median_days_to_live": 0.0,
-      "proposed": 42,
-      "shipped": 40
+      "proposed": 43,
+      "shipped": 42
     },
     "console": {
       "alerts": [
@@ -344,474 +344,506 @@
       "gate_log": [
         {
           "at": "2026-03-19T01:00:00",
-          "checks": [
-            "duplicate_key",
-            "required_null"
-          ],
-          "columns": [
-            "entity_id",
-            "entity_id,period"
-          ],
           "data_date": "2026-03-18",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            },
+            {
+              "check": "required_null",
+              "column": "entity_id"
+            }
+          ],
           "product": "finance.orders_b"
         },
         {
           "at": "2026-03-21T02:00:00",
-          "checks": [
-            "duplicate_key"
-          ],
-          "columns": [
-            "entity_id,period"
-          ],
           "data_date": "2026-03-20",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            }
+          ],
           "product": "mobility.new_0"
         },
         {
           "at": "2026-03-21T02:00:00",
-          "checks": [
-            "undeclared_pii"
-          ],
-          "columns": [
-            "note"
-          ],
           "data_date": "2026-03-20",
+          "findings": [
+            {
+              "check": "undeclared_pii",
+              "column": "note"
+            }
+          ],
           "product": "market.rankings_a"
         },
         {
           "at": "2026-03-21T03:00:00",
-          "checks": [
-            "duplicate_key",
-            "required_null"
-          ],
-          "columns": [
-            "entity_id",
-            "entity_id,period"
-          ],
           "data_date": "2026-03-20",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            },
+            {
+              "check": "required_null",
+              "column": "entity_id"
+            }
+          ],
           "product": "finance.users_a"
         },
         {
           "at": "2026-03-22T02:00:00",
-          "checks": [
-            "duplicate_key",
-            "out_of_range"
-          ],
-          "columns": [
-            "brands_0",
-            "entity_id,period"
-          ],
           "data_date": "2026-03-21",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            },
+            {
+              "check": "out_of_range",
+              "column": "brands_0"
+            }
+          ],
           "product": "mobility.brands_c"
         },
         {
           "at": "2026-03-23T01:00:00",
-          "checks": [
-            "duplicate_key"
-          ],
-          "columns": [
-            "entity_id,period"
-          ],
           "data_date": "2026-03-22",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            }
+          ],
           "product": "health.brands_b"
         },
         {
           "at": "2026-03-23T01:00:00",
-          "checks": [
-            "duplicate_key"
-          ],
-          "columns": [
-            "entity_id,period"
-          ],
           "data_date": "2026-03-22",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            }
+          ],
           "product": "survey.revenue_c"
         },
         {
           "at": "2026-03-24T01:00:00",
-          "checks": [
-            "duplicate_key",
-            "required_null"
-          ],
-          "columns": [
-            "entity_id",
-            "entity_id,period"
-          ],
           "data_date": "2026-03-23",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            },
+            {
+              "check": "required_null",
+              "column": "entity_id"
+            }
+          ],
           "product": "mobility.new_3"
         },
         {
           "at": "2026-03-24T01:00:00",
-          "checks": [
-            "duplicate_key",
-            "required_null"
-          ],
-          "columns": [
-            "entity_id",
-            "entity_id,period"
-          ],
           "data_date": "2026-03-23",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            },
+            {
+              "check": "required_null",
+              "column": "entity_id"
+            }
+          ],
           "product": "mobility.new_0"
         },
         {
           "at": "2026-03-28T02:00:00",
-          "checks": [
-            "duplicate_key",
-            "required_null"
-          ],
-          "columns": [
-            "entity_id",
-            "entity_id,period"
-          ],
           "data_date": "2026-03-27",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            },
+            {
+              "check": "required_null",
+              "column": "entity_id"
+            }
+          ],
           "product": "adsales.revenue_b"
         },
         {
           "at": "2026-03-29T02:00:00",
-          "checks": [
-            "duplicate_key",
-            "required_null"
-          ],
-          "columns": [
-            "entity_id",
-            "entity_id,period"
-          ],
           "data_date": "2026-03-28",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            },
+            {
+              "check": "required_null",
+              "column": "entity_id"
+            }
+          ],
           "product": "company.revenue_c"
         },
         {
           "at": "2026-03-29T02:00:00",
-          "checks": [
-            "duplicate_key",
-            "required_null"
-          ],
-          "columns": [
-            "entity_id",
-            "entity_id,period"
-          ],
           "data_date": "2026-03-28",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            },
+            {
+              "check": "required_null",
+              "column": "entity_id"
+            }
+          ],
           "product": "adsales.prices_a"
         },
         {
           "at": "2026-03-30T01:00:00",
-          "checks": [
-            "duplicate_key"
-          ],
-          "columns": [
-            "entity_id,period"
-          ],
           "data_date": "2026-03-29",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            }
+          ],
           "product": "mobility.rankings_a"
         },
         {
           "at": "2026-04-01T02:00:00",
-          "checks": [
-            "duplicate_key"
-          ],
-          "columns": [
-            "entity_id,period"
-          ],
           "data_date": "2026-03-31",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            }
+          ],
           "product": "finance.prices_c"
         },
         {
           "at": "2026-04-01T03:00:00",
-          "checks": [
-            "duplicate_key"
-          ],
-          "columns": [
-            "entity_id,period"
-          ],
           "data_date": "2026-03-31",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            }
+          ],
           "product": "content.panel_b"
         },
         {
           "at": "2026-04-02T01:00:00",
-          "checks": [
-            "duplicate_key"
-          ],
-          "columns": [
-            "entity_id,period"
-          ],
           "data_date": "2026-04-01",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            }
+          ],
           "product": "consumer.revenue_b"
         },
         {
           "at": "2026-04-05T01:00:00",
-          "checks": [
-            "duplicate_key"
-          ],
-          "columns": [
-            "entity_id,period"
-          ],
           "data_date": "2026-04-04",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            }
+          ],
           "product": "health.brands_a"
         },
         {
           "at": "2026-04-07T01:00:00",
-          "checks": [
-            "duplicate_key"
-          ],
-          "columns": [
-            "entity_id,period"
-          ],
           "data_date": "2026-04-06",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            }
+          ],
           "product": "mobility.new_3"
         },
         {
           "at": "2026-04-08T01:00:00",
-          "checks": [
-            "duplicate_key",
-            "required_null"
-          ],
-          "columns": [
-            "entity_id",
-            "entity_id,period"
-          ],
           "data_date": "2026-04-07",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            },
+            {
+              "check": "required_null",
+              "column": "entity_id"
+            }
+          ],
           "product": "survey.new_1"
         },
         {
           "at": "2026-04-08T02:00:00",
-          "checks": [
-            "undeclared_pii"
-          ],
-          "columns": [
-            "note"
-          ],
           "data_date": "2026-04-07",
+          "findings": [
+            {
+              "check": "undeclared_pii",
+              "column": "note"
+            }
+          ],
           "product": "market.rankings_a"
         },
         {
           "at": "2026-04-09T02:00:00",
-          "checks": [
-            "scale_shift"
-          ],
-          "columns": [
-            "traffic_1"
-          ],
           "data_date": "2026-04-08",
+          "findings": [
+            {
+              "check": "scale_shift",
+              "column": "traffic_1"
+            }
+          ],
           "product": "mobility.new_7"
         },
         {
           "at": "2026-04-09T02:00:00",
-          "checks": [
-            "duplicate_key"
-          ],
-          "columns": [
-            "entity_id,period"
-          ],
           "data_date": "2026-04-08",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            }
+          ],
           "product": "adsales.prices_a"
         },
         {
           "at": "2026-04-09T04:00:00",
-          "checks": [
-            "undeclared_pii"
-          ],
-          "columns": [
-            "note"
-          ],
           "data_date": "2026-04-08",
+          "findings": [
+            {
+              "check": "undeclared_pii",
+              "column": "note"
+            }
+          ],
           "product": "tracking.orders_a"
         },
         {
           "at": "2026-04-10T01:00:00",
-          "checks": [
-            "duplicate_key"
-          ],
-          "columns": [
-            "entity_id,period"
-          ],
           "data_date": "2026-04-09",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            }
+          ],
           "product": "adsales.prices_a"
         },
         {
           "at": "2026-04-11T01:00:00",
-          "checks": [
-            "scale_shift"
-          ],
-          "columns": [
-            "rankings_1"
-          ],
           "data_date": "2026-04-10",
+          "findings": [
+            {
+              "check": "scale_shift",
+              "column": "rankings_1"
+            }
+          ],
           "product": "health.brands_b"
         },
         {
           "at": "2026-04-12T01:00:00",
-          "checks": [
-            "duplicate_key",
-            "required_null"
-          ],
-          "columns": [
-            "entity_id",
-            "entity_id,period"
-          ],
           "data_date": "2026-04-11",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            },
+            {
+              "check": "required_null",
+              "column": "entity_id"
+            }
+          ],
           "product": "survey.prices_a"
         },
         {
           "at": "2026-04-15T02:00:00",
-          "checks": [
-            "duplicate_key",
-            "required_null"
-          ],
-          "columns": [
-            "entity_id",
-            "entity_id,period"
-          ],
           "data_date": "2026-04-14",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            },
+            {
+              "check": "required_null",
+              "column": "entity_id"
+            }
+          ],
           "product": "company.users_b"
         },
         {
           "at": "2026-04-19T01:00:00",
-          "checks": [
-            "duplicate_key",
-            "required_null"
-          ],
-          "columns": [
-            "entity_id",
-            "entity_id,period"
-          ],
           "data_date": "2026-04-18",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            },
+            {
+              "check": "required_null",
+              "column": "entity_id"
+            }
+          ],
           "product": "finance.prices_c"
         },
         {
           "at": "2026-04-19T03:00:00",
-          "checks": [
-            "undeclared_pii"
-          ],
-          "columns": [
-            "note"
-          ],
           "data_date": "2026-04-18",
+          "findings": [
+            {
+              "check": "undeclared_pii",
+              "column": "note"
+            }
+          ],
           "product": "finance.users_a"
         },
         {
           "at": "2026-04-20T01:00:00",
-          "checks": [
-            "undeclared_pii"
-          ],
-          "columns": [
-            "note"
-          ],
           "data_date": "2026-04-19",
+          "findings": [
+            {
+              "check": "undeclared_pii",
+              "column": "note"
+            }
+          ],
           "product": "survey.prices_a"
         },
         {
           "at": "2026-04-22T01:00:00",
-          "checks": [
-            "duplicate_key",
-            "required_null"
-          ],
-          "columns": [
-            "entity_id",
-            "entity_id,period"
-          ],
           "data_date": "2026-04-21",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            },
+            {
+              "check": "required_null",
+              "column": "entity_id"
+            }
+          ],
           "product": "market.new_4"
         },
         {
           "at": "2026-04-22T02:00:00",
-          "checks": [
-            "duplicate_key",
-            "required_null"
-          ],
-          "columns": [
-            "entity_id",
-            "entity_id,period"
-          ],
           "data_date": "2026-04-21",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            },
+            {
+              "check": "required_null",
+              "column": "entity_id"
+            }
+          ],
           "product": "content.revenue_a"
         },
         {
           "at": "2026-04-22T20:00:00",
-          "checks": [
-            "scale_shift"
-          ],
-          "columns": [
-            "users_0"
-          ],
           "data_date": "2026-04-21",
+          "findings": [
+            {
+              "check": "scale_shift",
+              "column": "users_0"
+            }
+          ],
           "product": "tracking.penetration_b"
         },
         {
           "at": "2026-04-25T01:00:00",
-          "checks": [
-            "duplicate_key",
-            "required_null"
-          ],
-          "columns": [
-            "entity_id",
-            "entity_id,period"
-          ],
           "data_date": "2026-04-24",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            },
+            {
+              "check": "required_null",
+              "column": "entity_id"
+            }
+          ],
           "product": "survey.revenue_c"
         },
         {
           "at": "2026-04-26T01:00:00",
-          "checks": [
-            "scale_shift"
-          ],
-          "columns": [
-            "rankings_0"
-          ],
           "data_date": "2026-04-25",
+          "findings": [
+            {
+              "check": "scale_shift",
+              "column": "rankings_0"
+            }
+          ],
           "product": "company.traffic_a"
         },
         {
           "at": "2026-04-27T03:00:00",
-          "checks": [
-            "duplicate_key"
-          ],
-          "columns": [
-            "entity_id,period"
-          ],
           "data_date": "2026-04-26",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            }
+          ],
           "product": "market.rankings_a"
         },
         {
           "at": "2026-04-28T03:00:00",
-          "checks": [
-            "duplicate_key"
-          ],
-          "columns": [
-            "entity_id,period"
-          ],
           "data_date": "2026-04-27",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            }
+          ],
           "product": "tracking.orders_a"
         },
         {
           "at": "2026-04-30T01:00:00",
-          "checks": [
-            "duplicate_key"
-          ],
-          "columns": [
-            "entity_id,period"
-          ],
           "data_date": "2026-04-29",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            }
+          ],
           "product": "consumer.new_6"
         },
         {
           "at": "2026-05-02T02:00:00",
-          "checks": [
-            "duplicate_key",
-            "required_null"
-          ],
-          "columns": [
-            "entity_id",
-            "entity_id,period"
-          ],
           "data_date": "2026-05-01",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            },
+            {
+              "check": "required_null",
+              "column": "entity_id"
+            }
+          ],
           "product": "company.users_b"
         },
         {
           "at": "2026-05-03T02:00:00",
-          "checks": [
-            "duplicate_key"
-          ],
-          "columns": [
-            "entity_id,period"
-          ],
           "data_date": "2026-05-02",
+          "findings": [
+            {
+              "check": "duplicate_key",
+              "column": "entity_id,period"
+            }
+          ],
           "product": "finance.prices_c"
         }
       ],
@@ -1694,7 +1726,7 @@
           ],
           "quarantined": 3,
           "team": "mobility-outlook",
-          "version": "1.1.0"
+          "version": "1.3.0"
         },
         {
           "agent_ready": true,
@@ -1883,26 +1915,221 @@
       ],
       "rejected_changes": [
         {
-          "at": "2026-04-18T10:00:00",
-          "product": "mobility.brands_c",
-          "to": null,
+          "at": "2026-01-26T10:00:00",
+          "product": "market.rankings_a",
+          "to": "1.2.0",
           "violations": [
             {
-              "fix": "see products/ for the reference descriptors",
-              "msg": "Value error, columns declared twice: rankings_1_v2",
-              "rule": "schema"
+              "fix": "keep the column and add the new one next to it, or publish the new shape as a separate major version and move consumers first",
+              "msg": "type_changed on extra_7 breaks human:survey-data, service:statista-connect",
+              "rule": "consumers"
+            },
+            {
+              "fix": "bump the major version",
+              "msg": "breaking change (type_changed) in a minor version",
+              "rule": "major"
             }
           ]
         },
         {
-          "at": "2026-04-19T10:00:00",
-          "product": "mobility.brands_c",
-          "to": null,
+          "at": "2026-02-01T10:00:00",
+          "product": "content.new_5",
+          "to": "1.0.0",
           "violations": [
             {
-              "fix": "see products/ for the reference descriptors",
-              "msg": "Value error, columns declared twice: rankings_1_v2",
-              "rule": "schema"
+              "fix": "agents misread numbers without units: add unit and description",
+              "msg": "numeric column forecast_0 has no unit or description",
+              "rule": "agent_ready"
+            }
+          ]
+        },
+        {
+          "at": "2026-02-02T10:00:00",
+          "product": "finance.users_a",
+          "to": "3.1.0",
+          "violations": [
+            {
+              "fix": "bump the major version",
+              "msg": "breaking change (unit_changed) in a minor version",
+              "rule": "major"
+            }
+          ]
+        },
+        {
+          "at": "2026-02-09T10:00:00",
+          "product": "adsales.prices_a",
+          "to": "1.1.0",
+          "violations": [
+            {
+              "fix": "keep the column and add the new one next to it, or publish the new shape as a separate major version and move consumers first",
+              "msg": "unit_changed on brands_0 breaks service:statista-connect",
+              "rule": "consumers"
+            },
+            {
+              "fix": "bump the major version",
+              "msg": "breaking change (unit_changed) in a minor version",
+              "rule": "major"
+            }
+          ]
+        },
+        {
+          "at": "2026-02-09T10:00:00",
+          "product": "mobility.brands_c",
+          "to": "2.0.0",
+          "violations": [
+            {
+              "fix": "keep the column and add the new one next to it, or publish the new shape as a separate major version and move consumers first",
+              "msg": "removed_column on rankings_1 breaks content.panel_b, human:content-delivery",
+              "rule": "consumers"
+            }
+          ]
+        },
+        {
+          "at": "2026-02-14T10:00:00",
+          "product": "mobility.new_3",
+          "to": "1.0.0",
+          "violations": [
+            {
+              "fix": "set owner.email to the team's shared address",
+              "msg": "no team e-mail for incidents",
+              "rule": "owner"
+            }
+          ]
+        },
+        {
+          "at": "2026-02-14T10:00:00",
+          "product": "survey.new_1",
+          "to": "1.0.0",
+          "violations": [
+            {
+              "fix": "declare every key column with required: true",
+              "msg": "key column period is missing or not required",
+              "rule": "key"
+            }
+          ]
+        },
+        {
+          "at": "2026-02-15T10:00:00",
+          "product": "consumer.new_6",
+          "to": "1.0.0",
+          "violations": [
+            {
+              "fix": "classify the product confidential (personal data is masked for other domains) or drop the column",
+              "msg": "column contact_email is personal data but the product is internal",
+              "rule": "pii"
+            }
+          ]
+        },
+        {
+          "at": "2026-02-16T10:00:00",
+          "product": "health.brands_a",
+          "to": "2.0.0",
+          "violations": [
+            {
+              "fix": "keep the column and add the new one next to it, or publish the new shape as a separate major version and move consumers first",
+              "msg": "removed_column on rankings_1 breaks human:content-delivery, service:bi-dashboards",
+              "rule": "consumers"
+            }
+          ]
+        },
+        {
+          "at": "2026-02-16T10:00:00",
+          "product": "mobility.new_3",
+          "to": "1.1.0",
+          "violations": [
+            {
+              "fix": "bump the major version",
+              "msg": "breaking change (removed_column) in a minor version",
+              "rule": "major"
+            }
+          ]
+        },
+        {
+          "at": "2026-03-02T10:00:00",
+          "product": "company.users_b",
+          "to": "2.0.0",
+          "violations": [
+            {
+              "fix": "keep the column and add the new one next to it, or publish the new shape as a separate major version and move consumers first",
+              "msg": "type_changed on brands_1 breaks agent:sales-copilot",
+              "rule": "consumers"
+            }
+          ]
+        },
+        {
+          "at": "2026-03-09T10:00:00",
+          "product": "mobility.new_0",
+          "to": "1.0.0",
+          "violations": [
+            {
+              "fix": "agents misread numbers without units: add unit and description",
+              "msg": "numeric column forecast_0 has no unit or description",
+              "rule": "agent_ready"
+            }
+          ]
+        },
+        {
+          "at": "2026-03-16T10:00:00",
+          "product": "adsales.prices_a",
+          "to": "1.3.0",
+          "violations": [
+            {
+              "fix": "bump the major version",
+              "msg": "breaking change (removed_column) in a minor version",
+              "rule": "major"
+            }
+          ]
+        },
+        {
+          "at": "2026-03-23T10:00:00",
+          "product": "mobility.brands_c",
+          "to": "1.2.0",
+          "violations": [
+            {
+              "fix": "keep the column and add the new one next to it, or publish the new shape as a separate major version and move consumers first",
+              "msg": "removed_column on rankings_1 breaks content.panel_b, human:content-delivery, human:survey-data",
+              "rule": "consumers"
+            },
+            {
+              "fix": "bump the major version",
+              "msg": "breaking change (removed_column) in a minor version",
+              "rule": "major"
+            }
+          ]
+        },
+        {
+          "at": "2026-03-30T10:00:00",
+          "product": "company.users_b",
+          "to": "2.0.0",
+          "violations": [
+            {
+              "fix": "keep the column and add the new one next to it, or publish the new shape as a separate major version and move consumers first",
+              "msg": "removed_column on orders_0 breaks agent:sales-copilot, human:company-data",
+              "rule": "consumers"
+            }
+          ]
+        },
+        {
+          "at": "2026-04-10T10:00:00",
+          "product": "finance.new_8",
+          "to": "1.0.0",
+          "violations": [
+            {
+              "fix": "lower the budget or ask the platform team for a larger cap",
+              "msg": "950 credits a month is above the 200 cap for XSMALL",
+              "rule": "budget"
+            }
+          ]
+        },
+        {
+          "at": "2026-04-11T10:00:00",
+          "product": "consumer.new_2",
+          "to": "1.0.0",
+          "violations": [
+            {
+              "fix": "classify the product confidential (personal data is masked for other domains) or drop the column",
+              "msg": "column contact_email is personal data but the product is internal",
+              "rule": "pii"
             }
           ]
         },
@@ -1915,18 +2142,6 @@
               "fix": "keep the column and add the new one next to it, or publish the new shape as a separate major version and move consumers first",
               "msg": "unit_changed on extra_7 breaks human:survey-data, service:statista-connect",
               "rule": "consumers"
-            }
-          ]
-        },
-        {
-          "at": "2026-04-20T10:00:00",
-          "product": "mobility.brands_c",
-          "to": null,
-          "violations": [
-            {
-              "fix": "see products/ for the reference descriptors",
-              "msg": "Value error, columns declared twice: rankings_1_v2",
-              "rule": "schema"
             }
           ]
         },
@@ -1948,162 +2163,6 @@
           ]
         },
         {
-          "at": "2026-04-21T10:00:00",
-          "product": "mobility.brands_c",
-          "to": null,
-          "violations": [
-            {
-              "fix": "see products/ for the reference descriptors",
-              "msg": "Value error, columns declared twice: rankings_1_v2",
-              "rule": "schema"
-            }
-          ]
-        },
-        {
-          "at": "2026-04-22T10:00:00",
-          "product": "mobility.brands_c",
-          "to": null,
-          "violations": [
-            {
-              "fix": "see products/ for the reference descriptors",
-              "msg": "Value error, columns declared twice: rankings_1_v2",
-              "rule": "schema"
-            }
-          ]
-        },
-        {
-          "at": "2026-04-23T10:00:00",
-          "product": "mobility.brands_c",
-          "to": null,
-          "violations": [
-            {
-              "fix": "see products/ for the reference descriptors",
-              "msg": "Value error, columns declared twice: rankings_1_v2",
-              "rule": "schema"
-            }
-          ]
-        },
-        {
-          "at": "2026-04-24T10:00:00",
-          "product": "mobility.brands_c",
-          "to": null,
-          "violations": [
-            {
-              "fix": "see products/ for the reference descriptors",
-              "msg": "Value error, columns declared twice: rankings_1_v2",
-              "rule": "schema"
-            }
-          ]
-        },
-        {
-          "at": "2026-04-25T10:00:00",
-          "product": "mobility.brands_c",
-          "to": null,
-          "violations": [
-            {
-              "fix": "see products/ for the reference descriptors",
-              "msg": "Value error, columns declared twice: rankings_1_v2",
-              "rule": "schema"
-            }
-          ]
-        },
-        {
-          "at": "2026-04-26T10:00:00",
-          "product": "mobility.brands_c",
-          "to": null,
-          "violations": [
-            {
-              "fix": "see products/ for the reference descriptors",
-              "msg": "Value error, columns declared twice: rankings_1_v2",
-              "rule": "schema"
-            }
-          ]
-        },
-        {
-          "at": "2026-04-27T10:00:00",
-          "product": "mobility.brands_c",
-          "to": null,
-          "violations": [
-            {
-              "fix": "see products/ for the reference descriptors",
-              "msg": "Value error, columns declared twice: rankings_1_v2",
-              "rule": "schema"
-            }
-          ]
-        },
-        {
-          "at": "2026-04-28T10:00:00",
-          "product": "mobility.brands_c",
-          "to": null,
-          "violations": [
-            {
-              "fix": "see products/ for the reference descriptors",
-              "msg": "Value error, columns declared twice: rankings_1_v2",
-              "rule": "schema"
-            }
-          ]
-        },
-        {
-          "at": "2026-04-29T10:00:00",
-          "product": "mobility.brands_c",
-          "to": null,
-          "violations": [
-            {
-              "fix": "see products/ for the reference descriptors",
-              "msg": "Value error, columns declared twice: rankings_1_v2",
-              "rule": "schema"
-            }
-          ]
-        },
-        {
-          "at": "2026-04-30T10:00:00",
-          "product": "mobility.brands_c",
-          "to": null,
-          "violations": [
-            {
-              "fix": "see products/ for the reference descriptors",
-              "msg": "Value error, columns declared twice: rankings_1_v2",
-              "rule": "schema"
-            }
-          ]
-        },
-        {
-          "at": "2026-05-01T10:00:00",
-          "product": "mobility.brands_c",
-          "to": null,
-          "violations": [
-            {
-              "fix": "see products/ for the reference descriptors",
-              "msg": "Value error, columns declared twice: rankings_1_v2",
-              "rule": "schema"
-            }
-          ]
-        },
-        {
-          "at": "2026-05-02T10:00:00",
-          "product": "mobility.brands_c",
-          "to": null,
-          "violations": [
-            {
-              "fix": "see products/ for the reference descriptors",
-              "msg": "Value error, columns declared twice: rankings_1_v2",
-              "rule": "schema"
-            }
-          ]
-        },
-        {
-          "at": "2026-05-03T10:00:00",
-          "product": "mobility.brands_c",
-          "to": null,
-          "violations": [
-            {
-              "fix": "see products/ for the reference descriptors",
-              "msg": "Value error, columns declared twice: rankings_1_v2",
-              "rule": "schema"
-            }
-          ]
-        },
-        {
           "at": "2026-05-04T10:00:00",
           "product": "company.revenue_c",
           "to": "2.0.0",
@@ -2112,18 +2171,6 @@
               "fix": "keep the column and add the new one next to it, or publish the new shape as a separate major version and move consumers first",
               "msg": "removed_column on penetration_1 breaks human:finance-revenue",
               "rule": "consumers"
-            }
-          ]
-        },
-        {
-          "at": "2026-05-04T10:00:00",
-          "product": "mobility.brands_c",
-          "to": null,
-          "violations": [
-            {
-              "fix": "see products/ for the reference descriptors",
-              "msg": "Value error, columns declared twice: rankings_1_v2",
-              "rule": "schema"
             }
           ]
         }
@@ -2161,7 +2208,7 @@
       "published_to_other_domains": 0,
       "values_published": 0
     },
-    "policy_evaluations": 175,
+    "policy_evaluations": 181,
     "ports": {
       "agent_reads_checked": 25,
       "identical_api_mcp_a2a": 25,
@@ -2177,7 +2224,7 @@
       "median_hours_to_team": 19.5,
       "usd_burnt": 3420
     },
-    "statements": 50580,
+    "statements": 50550,
     "terraform": {
       "kafka_topics": 11,
       "products": 34,
